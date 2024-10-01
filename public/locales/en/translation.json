@@ -1,3 +1,19 @@
 {
-    "Hola, soy Jorge": "Hi, I'm Jorge"
+    "Hola, soy Jorge": "Hello, I'm Jorge",
+    "FrontEnd Developer": "FrontEnd Developer",
+    "Sobre mí": "About me",
+    "Partiendo de la base de HTML, CSS Y JavaScript me especializado en la creación de aplicaciones con React. Me considero una persona autodidacta y comprometida, con capacidad para el aprendizaje y el trabajo en equipo." : "Starting from the basics of HTML, CSS, and JavaScript, I have specialized in creating applications with React. I consider myself a self-taught and committed person, with the ability to learn and work in a team.",
+    "Si quieres saber más no dudes en descargar mi currículum" : "If you want to know more, don't hesitate to download my resume",
+    "Descargar Cv" : "Download Resume",
+    "Experiencia" : "Experience",
+    "Mi área principal de especialización es el desarrollo Frontend pero mi formación es FullStack." : "My main area of expertise is Frontend development, but my training is FullStack.",
+    "Creación de aplicaciones web con React y Vite, gestión de estados globales con Redux Toolkit y tipado con TypeScript. Gestión de la información en tiempo real con WebSockets. Diseño responsive con CSS y uso de frameworks y librerías como Tailwind, Bootstrap o Mui. Creación de prototipos basados en principios UX/UI con Figma. Manejo de Backend con Node y Express, bases de datos con MySql, conocimientos de API REST. Control de versiones con Git." : "Web application development with React and Vite, global state management with Redux Toolkit, and typing with TypeScript. Real-time information management with WebSockets. Responsive design with CSS and use of frameworks and libraries such as Tailwind, Bootstrap, or MUI. Prototyping based on UX/UI principles with Figma. Backend handling with Node and Express, databases with MySQL, knowledge of REST APIs. Version control with Git.",
+    "Nombre" : "Name",
+    "Email" : "Email",
+    "Mensaje" : "Message",
+    "Enviar" : "Send",
+    "Mensaje enviado con éxito" : "Message sent successfully",
+    "Home" : "Home",
+    "Contacto" : "Contact",
+    "Tecnologías" : "Technologies"
 }
