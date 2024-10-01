@@ -5,9 +5,14 @@ import { Modal } from '../Modal/Modal';
 import { t } from 'i18next';
 
 export const Contact: React.FC = () => {
-    const [submitted, setSubmitted] = useState(false);
     const [openModal, setOpenModal] = useState(false);
     const [buttonDisabled, setButtonDisabled] = useState(true);
+
+    const resetFormFields = () => {
+        nameField.reset();
+        emailField.reset();
+        messageField.reset();
+    };
 
     const nameField = useField({
         type: 'text',
@@ -29,9 +34,9 @@ export const Contact: React.FC = () => {
             !nameField.error &&
             !emailField.error &&
             !messageField.error &&
-            nameField.value.trim() !== '' &&
-            emailField.value.trim() !== '' &&
-            messageField.value.trim() !== ''
+            nameField.value?.trim() !== '' &&
+            emailField.value?.trim() !== '' &&
+            messageField.value?.trim() !== ''
         ) {
             setButtonDisabled(false);
         } else {
@@ -48,7 +53,6 @@ export const Contact: React.FC = () => {
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        setSubmitted(true);
 
         if (nameField.error || emailField.error || messageField.error) {
             return;
@@ -82,17 +86,7 @@ export const Contact: React.FC = () => {
             console.error('Fetch error:', error);
         }
 
-        nameField.onChange({
-            target: { value: '' },
-        } as React.ChangeEvent<HTMLInputElement>);
-        emailField.onChange({
-            target: { value: '' },
-        } as React.ChangeEvent<HTMLInputElement>);
-        messageField.onChange({
-            target: { value: '' },
-        } as React.ChangeEvent<HTMLTextAreaElement>);
-
-        setSubmitted(false);
+        resetFormFields();
     };
 
     return (
@@ -107,17 +101,23 @@ export const Contact: React.FC = () => {
                             placeholder={t(`Nombre`)}
                             name='first_name'
                         />
-                        {submitted && nameField.error && (
-                            <span style={{ color: 'red' }}>
-                                {nameField.error}
+                        {nameField.error && (
+                            <span>
+                                {`${
+                                    nameField.error +
+                                    t(` El nombre no puede estar vacío.`)
+                                } `}
                             </span>
                         )}
                     </div>
                     <div className={styles.formGroup}>
                         <label htmlFor='email'>{t(`Email`)}</label>
                         <input {...emailField} placeholder={t(`Email`)} />
-                        {submitted && emailField.error && (
-                            <p style={{ color: 'red' }}>{emailField.error}</p>
+                        {emailField.error && (
+                            <span>{`${
+                                nameField.error +
+                                t(` Asegurese de que tiene formato de Email.`)
+                            } `}</span>
                         )}
                     </div>
                     <div className={styles.formGroupMessage}>
@@ -126,8 +126,11 @@ export const Contact: React.FC = () => {
                             {...messageField}
                             placeholder={t(`Mensaje`)}
                         />
-                        {submitted && messageField.error && (
-                            <p style={{ color: 'red' }}>{messageField.error}</p>
+                        {messageField.error && (
+                            <span>{`${
+                                nameField.error +
+                                t(` El mensaje no puede estar vacío.`)
+                            } `}</span>
                         )}
                     </div>
                     <button type='submit' disabled={buttonDisabled}>

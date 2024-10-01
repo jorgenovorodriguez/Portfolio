@@ -33,6 +33,16 @@
     flex-direction: column;
 }
 
+.formGroup span {
+    color: red;
+    font-family: var(--font-roboto);
+}
+
+.formGroupMessage span {
+    color: red;
+    font-family: var(--font-roboto);
+}
+
 .formGroup label {
     font-family: var(--font-roboto);
     color: var(--color-text);
