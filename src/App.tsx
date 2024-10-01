@@ -11,7 +11,7 @@ const App = () => {
     return (
         <>
             <div className={styles.App}>
-                <Navbar />
+                {/* <Navbar /> */}
                 <Home />
                 <About />
                 <Experience />

@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import useField from '../../hooks/useField';
 import styles from './Contact.module.css';
 import { Modal } from '../Modal/Modal';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 export const Contact: React.FC = () => {
     const [submitted, setSubmitted] = useState(false);
     const [openModal, setOpenModal] = useState(false);
     const [buttonDisabled, setButtonDisabled] = useState(true);
+    const [notRobot, setNotRobot] = useState(false);
 
     const nameField = useField({
         type: 'text',
@@ -30,7 +32,8 @@ export const Contact: React.FC = () => {
             !messageField.error &&
             nameField.value.trim() !== '' &&
             emailField.value.trim() !== '' &&
-            messageField.value.trim() !== ''
+            messageField.value.trim() !== '' &&
+            notRobot
         ) {
             setButtonDisabled(false);
         } else {
@@ -43,6 +46,7 @@ export const Contact: React.FC = () => {
         nameField.error,
         emailField.error,
         messageField.error,
+        notRobot,
     ]);
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -99,6 +103,10 @@ export const Contact: React.FC = () => {
                             <p style={{ color: 'red' }}>{messageField.error}</p>
                         )}
                     </div>
+                    <ReCAPTCHA
+                        sitekey='6Ld0QFQqAAAAAIrDijlC69M3ma0N64EoiF0Udc0K'
+                        onChange={() => setNotRobot(true)}
+                    />
                     <button
                         type='submit'
                         disabled={buttonDisabled}

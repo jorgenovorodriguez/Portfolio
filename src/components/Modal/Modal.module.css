@@ -8,11 +8,11 @@
     left: 50%;
     border-radius: 20px;
     transform: translate(-50%, -50%);
-    background-color: #1c3157;
+    background-color: #32323c;
     padding: 50px;
     z-index: 1000;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    opacity: 0.9;
+    opacity: 1;
 }
 
 .modal p {
@@ -20,7 +20,7 @@
     padding-left: 10px;
     padding-right: 10px;
     font-family: var(--font-roboto);
-    color: var(--color-text);
+    color: #a0a0a0;
 }
 
 .closeIcon {

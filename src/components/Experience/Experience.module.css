@@ -27,7 +27,7 @@
 
 .history {
     position: relative;
-    border-left: 2px solid #ffffff;
+    border-left: 2px solid #32323c;
     width: 75%;
     display: flex;
     flex-direction: column;
