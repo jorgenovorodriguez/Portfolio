@@ -34,11 +34,13 @@
 }
 
 .formGroup span {
+    padding-top: 3px;
     color: red;
     font-family: var(--font-roboto);
 }
 
 .formGroupMessage span {
+    padding-top: 3px;
     color: red;
     font-family: var(--font-roboto);
 }
@@ -125,5 +127,17 @@ button:disabled {
     .formGroupMessage textarea {
         height: 300px;
         width: 250px;
+    }
+
+    .formGroup span {
+        font-size: 10px;
+        max-width: 95%;
+        padding-top: 3px;
+    }
+
+    .formGroupMessage span {
+        font-size: 10px;
+        max-width: 95%;
+        padding-top: 3px;
     }
 }

@@ -1,6 +1,5 @@
 import { t } from 'i18next';
 import { useState } from 'react';
-
 interface UseFieldProps {
     type: string;
     validate?: (value: string) => boolean;

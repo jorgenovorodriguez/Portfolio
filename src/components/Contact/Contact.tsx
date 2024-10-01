@@ -114,10 +114,9 @@ export const Contact: React.FC = () => {
                         <label htmlFor='email'>{t(`Email`)}</label>
                         <input {...emailField} placeholder={t(`Email`)} />
                         {emailField.error && (
-                            <span>{`${
-                                nameField.error +
-                                t(` Asegurese de que tiene formato de Email.`)
-                            } `}</span>
+                            <span>{`${t(
+                                ` Asegúrese de que tiene formato de Email.`
+                            )} `}</span>
                         )}
                     </div>
                     <div className={styles.formGroupMessage}>
