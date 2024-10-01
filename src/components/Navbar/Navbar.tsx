@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState, MouseEvent } from 'react';
 import styles from './Navbar.module.css';
-import { HomeIcon } from '../../Icons/HomeIcon';
-import { AboutIcon } from '../../Icons/AboutIcon';
-import { ExperienceIcon } from '../../Icons/ExperienceIcon';
-import { TechnologiesIcon } from '../../Icons/TechnologiesIcon';
-import { ContactIcon } from '../../Icons/ContactIcon';
-import { CloseIcon } from '../../Icons/CloseIcon';
-import { MenuIcon } from '../../Icons/MenuIcon';
+import { HomeIcon } from '../../../public/Icons/HomeIcon';
+import { AboutIcon } from '../../../public/Icons/AboutIcon';
+import { ExperienceIcon } from '../../../public/Icons/ExperienceIcon';
+import { TechnologiesIcon } from '../../../public/Icons/TechnologiesIcon';
+import { MenuIcon } from '../../../public/Icons/MenuIcon';
+import { CloseIcon } from '../../../public/Icons/CloseIcon';
+import { ContactIcon } from '../../../public/Icons/ContactIcon';
 
 type MenuRef = HTMLDivElement | null;
 

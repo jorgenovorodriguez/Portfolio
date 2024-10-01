@@ -6,7 +6,7 @@ interface ModalProps {
     onClose: () => void;
 }
 
-import { CloseIcon } from '../../Icons/CloseIcon';
+import { CloseIcon } from '../../../public/Icons/CloseIcon';
 
 export const Modal: React.FC<ModalProps> = ({ text, onClose }) => {
     return (

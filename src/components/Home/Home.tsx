@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './Home.module.css';
 import { getImageUrl, redirectToWebsite } from '../../utils';
-import { LInkedinIcon } from '../../Icons/LInkedinIcon';
+import { LInkedinIcon } from '../../../public/Icons/LInkedinIcon';
 
 export const Home: React.FC = () => {
     const homeImage: string = 'hero/heroImage.png';
