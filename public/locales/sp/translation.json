@@ -1,0 +1,19 @@
+{
+    "Hola, soy Jorge": "Hola, soy Jorge",
+    "FrontEnd Developer": "FrontEnd Developer",
+    "Sobre mí": "Sobre mí",
+    "Partiendo de la base de HTML, CSS Y JavaScript me especializado en la creación de aplicaciones con React. Me considero una persona autodidacta y comprometida, con capacidad para el aprendizaje y el trabajo en equipo." : "Partiendo de la base de HTML, CSS Y JavaScript me especializado en la creación de aplicaciones con React. Me considero una persona autodidacta y comprometida, con capacidad para el aprendizaje y el trabajo en equipo.",
+    "Si quieres saber más no dudes en descargar mi currículum" : "Si quieres saber más no dudes en descargar mi currículum",
+    "Descargar Cv" : "Descargar Cv",
+    "Experiencia" : "Experiencia",
+    "Mi área principal de especialización es el desarrollo Frontend pero mi formación es FullStack." : "Mi área principal de especialización es el desarrollo Frontend pero mi formación es FullStack.",
+    "Creación de aplicaciones web con React y Vite, gestión de estados globales con Redux Toolkit y tipado con TypeScript. Gestión de la información en tiempo real con WebSockets. Diseño responsive con CSS y uso de frameworks y librerías como Tailwind, Bootstrap o Mui. Creación de prototipos basados en principios UX/UI con Figma. Manejo de Backend con Node y Express, bases de datos con MySql, conocimientos de API REST. Control de versiones con Git." : "Creación de aplicaciones web con React y Vite, gestión de estados globales con Redux Toolkit y tipado con TypeScript. Gestión de la información en tiempo real con WebSockets. Diseño responsive con CSS y uso de frameworks y librerías como Tailwind, Bootstrap o Mui. Creación de prototipos basados en principios UX/UI con Figma. Manejo de Backend con Node y Express, bases de datos con MySql, conocimientos de API REST. Control de versiones con Git.",
+    "Nombre" : "Nombre",
+    "Email" : "Email",
+    "Mensaje" : "Mensaje",
+    "Enviar" : "Enviar",
+    "Mensaje enviado con éxito" : "Mensaje enviado con éxito",
+    "Home" : "Home",
+    "Contacto" : "Contacto",
+    "Tecnologías" : "Tecnologías"
+}

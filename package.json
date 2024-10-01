@@ -11,11 +11,14 @@
   },
   "dependencies": {
     "@fontsource/roboto": "^5.1.0",
+    "i18next": "^23.15.1",
+    "i18next-browser-languagedetector": "^8.0.0",
     "icons": "^1.0.0",
     "nodemon": "^3.1.7",
     "outfit": "link:@@fountsource/outfit",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-i18next": "^15.0.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

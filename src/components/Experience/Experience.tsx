@@ -4,11 +4,12 @@ import React from 'react';
 import styles from './Experience.module.css';
 import { getImageUrl, redirectToWebsite } from '../../utils';
 import history from '../../data/history.json';
+import { t } from 'i18next';
 
 export const Experience: React.FC = () => {
     return (
         <section className={styles.container} id='experience'>
-            <h2 className={styles.title}>{`Experiencia`}</h2>
+            <h2 className={styles.title}>{t(`Experiencia`)}</h2>
             <div className={styles.content}>
                 <ol className={styles.history}>
                     {history.map((historyItem, id) => {

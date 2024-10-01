@@ -4,6 +4,7 @@ import { AboutIcon } from '../../../public/Icons/AboutIcon';
 import { ExperienceIcon } from '../../../public/Icons/ExperienceIcon';
 import { TechnologiesIcon } from '../../../public/Icons/TechnologiesIcon';
 import { ContactIcon } from '../../../public/Icons/ContactIcon';
+import { t } from 'i18next';
 
 export const NavbarDesktop: React.FC = () => {
     return (
@@ -13,13 +14,13 @@ export const NavbarDesktop: React.FC = () => {
                     <li>
                         <div>
                             <HomeIcon color={`#5F73B0`} width={`1.2rem`} />
-                            <a href='/'>{`Home`}</a>
+                            <a href='/'>{t(`Home`)}</a>
                         </div>
                     </li>
                     <li>
                         <div>
                             <AboutIcon color={`#5F73B0`} width={`1.2rem`} />
-                            <a href='#about'>{`Sobre mí`}</a>
+                            <a href='#about'>{t(`Sobre mí`)}</a>
                         </div>
                     </li>
                     <li>
@@ -28,7 +29,7 @@ export const NavbarDesktop: React.FC = () => {
                                 color={`#5F73B0`}
                                 width={`1.2rem`}
                             />
-                            <a href='#experience'>{`Experiencia`}</a>
+                            <a href='#experience'>{t(`Experiencia`)}</a>
                         </div>
                     </li>
                     <li>
@@ -37,13 +38,13 @@ export const NavbarDesktop: React.FC = () => {
                                 color={`#5F73B0`}
                                 width={`1.2rem`}
                             />
-                            <a href='#technologies'>{`Tecnologías`}</a>
+                            <a href='#technologies'>{t(`Tecnologías`)}</a>
                         </div>
                     </li>
                     <li>
                         <div>
                             <ContactIcon color={`#5F73B0`} width={`1.2rem`} />
-                            <a href='#contact'>{`Contacto`}</a>
+                            <a href='#contact'>{t(`Contacto`)}</a>
                         </div>
                     </li>
                 </ul>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import useField from '../../hooks/useField';
 import styles from './Contact.module.css';
 import { Modal } from '../Modal/Modal';
+import { t } from 'i18next';
 
 export const Contact: React.FC = () => {
     const [submitted, setSubmitted] = useState(false);
@@ -100,10 +101,10 @@ export const Contact: React.FC = () => {
                 <h2 className={styles.title}>{`Contacto`}</h2>
                 <form onSubmit={handleSubmit} className={styles.form}>
                     <div className={styles.formGroup}>
-                        <label htmlFor='name'>{`Nombre`}</label>
+                        <label htmlFor='name'>{t(`Nombre`)}</label>
                         <input
                             {...nameField}
-                            placeholder='Nombre'
+                            placeholder={t(`Nombre`)}
                             name='first_name'
                         />
                         {submitted && nameField.error && (
@@ -113,28 +114,30 @@ export const Contact: React.FC = () => {
                         )}
                     </div>
                     <div className={styles.formGroup}>
-                        <label htmlFor='email'>{`Email`}</label>
-                        <input {...emailField} placeholder='Email' />
+                        <label htmlFor='email'>{t(`Email`)}</label>
+                        <input {...emailField} placeholder={t(`Email`)} />
                         {submitted && emailField.error && (
                             <p style={{ color: 'red' }}>{emailField.error}</p>
                         )}
                     </div>
                     <div className={styles.formGroupMessage}>
-                        <label htmlFor='message'>{`Mensaje`}</label>
-                        <textarea {...messageField} placeholder='Mensaje' />
+                        <label htmlFor='message'>{t(`Mensaje`)}</label>
+                        <textarea
+                            {...messageField}
+                            placeholder={t(`Mensaje`)}
+                        />
                         {submitted && messageField.error && (
                             <p style={{ color: 'red' }}>{messageField.error}</p>
                         )}
                     </div>
-                    <button
-                        type='submit'
-                        disabled={buttonDisabled}
-                    >{`Enviar`}</button>
+                    <button type='submit' disabled={buttonDisabled}>
+                        {t(`Enviar`)}
+                    </button>
                 </form>
             </div>
             {openModal && (
                 <Modal
-                    text={'Mensaje enviado con éxito'}
+                    text={t(`Mensaje enviado con éxito`)}
                     onClose={() => setOpenModal(false)}
                 />
             )}

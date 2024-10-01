@@ -6,6 +6,7 @@ import { Experience } from './components/Experience/Experience';
 import { Contact } from './components/Contact/Contact';
 import { Technologies } from './components/Technologies/Technologies';
 import { Footer } from './components/Footer/Footer';
+import './i18n';
 
 const App = () => {
     return (

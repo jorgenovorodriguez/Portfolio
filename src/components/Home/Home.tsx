@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './Home.module.css';
 import { getImageUrl, redirectToWebsite } from '../../utils';
 import { LInkedinIcon } from '../../../public/Icons/LInkedinIcon';
+import { t } from 'i18next';
 
 export const Home: React.FC = () => {
     const homeImage: string = 'hero/heroImage.png';
@@ -10,8 +11,8 @@ export const Home: React.FC = () => {
     return (
         <section className={styles.container}>
             <div className={styles.content}>
-                <h1 className={styles.title}>{`Hola, soy Jorge`}</h1>
-                <p className={styles.description}>{`FrontEnd Developer`}</p>
+                <h1 className={styles.title}>{t(`Hola, soy Jorge`)}</h1>
+                <p className={styles.description}>{t(`FrontEnd Developer`)}</p>
                 <div
                     onClick={() =>
                         redirectToWebsite(
