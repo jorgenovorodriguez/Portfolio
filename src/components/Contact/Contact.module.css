@@ -1,0 +1,110 @@
+@import '../../vars.css';
+
+.container {
+    color: var(--color-text);
+    margin-top: 79px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-roboto);
+    color: var(--color-text);
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 1.75px;
+    margin-bottom: 50px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: auto;
+}
+
+.formGroup {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup label {
+    font-family: var(--font-roboto);
+    color: var(--color-text);
+    font-size: 20px;
+}
+
+.formGroupMessage label {
+    margin-bottom: 15px;
+    font-family: var(--font-roboto);
+    color: var(--color-text);
+    font-size: 20px;
+}
+
+.formGroup input {
+    width: 600px;
+}
+
+.formGroupMessage textarea {
+    height: 150px;
+    width: 600px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: #1c3157;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: var(--font-roboto);
+    color: var(--color-text);
+    font-size: 20px;
+    width: 150px;
+    margin: 25px;
+    box-shadow: 0 8px 16px #000000b3;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 830px) {
+    .formGroupMessage {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formGroup input {
+        width: 250px;
+    }
+
+    .formGroupMessage textarea {
+        height: 300px;
+        width: 250px;
+    }
+}

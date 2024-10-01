@@ -1,0 +1,69 @@
+@import '../../vars.css';
+
+.container {
+    color: var(--color-text);
+    margin-top: 120px;
+    /* Gradiente de abajo hacia arriba */
+    background-image: linear-gradient(
+        to top,
+        var(--color-secondary),
+        var(--color-bg)
+    );
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100vw;
+    padding: 58px 10%;
+    gap: 10px;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    list-style: none;
+    gap: 26px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.link a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
+
+.link div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media screen and (max-width: 830px) {
+    .container {
+        flex-direction: column;
+        gap: 23px;
+    }
+
+    .links {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .link a {
+        color: var(--color-text);
+        text-decoration: none;
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 1.5px;
+    }
+}

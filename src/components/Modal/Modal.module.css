@@ -1,0 +1,55 @@
+@import '../../vars.css';
+
+.modal {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    background-color: #1c3157;
+    padding: 50px;
+    z-index: 1000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0.9;
+}
+
+.modal p {
+    font-size: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: var(--font-roboto);
+    color: var(--color-text);
+}
+
+.closeIcon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+@media screen and (max-width: 830px) {
+    .modal {
+        padding: 25px;
+    }
+
+    .modal p {
+        font-size: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-family: var(--font-roboto);
+        color: var(--color-text);
+    }
+}
