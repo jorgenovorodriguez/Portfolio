@@ -17,7 +17,7 @@ export const About: React.FC = () => {
                         <div>
                             <p>
                                 {t(
-                                    `Partiendo de la base de HTML, CSS Y JavaScript me especializado en la creación de aplicaciones con React. Me considero una persona autodidacta y comprometida, con capacidad para el aprendizaje y el trabajo en equipo. `
+                                    `Partiendo de la base de HTML, CSS Y JavaScript me especializado en la creación de aplicaciones con React. Me considero una persona autodidacta y comprometida, con capacidad para el aprendizaje y el trabajo en equipo.`
                                 )}
                             </p>
                             <br />

@@ -5,7 +5,7 @@ import translationSP from '../public/locales/sp/translation.json';
 import translationEN from '../public/locales/en/translation.json';
 
 const resources = {
-    sp: {
+    es: {
         translation: translationSP,
     },
     en: {
@@ -13,16 +13,12 @@ const resources = {
     },
 };
 
-if (!localStorage.getItem('I18N_LANGUAGE')) {
-    localStorage.setItem('I18N_LANGUAGE', 'sp');
-}
-
 i18n.use(detector)
     .use(initReactI18next)
     .init({
         resources,
-        lng: localStorage.getItem('I18N_LANGUAGE') || 'sp',
-        fallbackLng: 'sp',
+        lng: localStorage.getItem('I18N_LANGUAGE'),
+        fallbackLng: 'es',
 
         keySeparator: false,
 
@@ -31,8 +27,8 @@ i18n.use(detector)
         },
 
         detection: {
-            order: ['navigator'],
-            caches: ['localStorage', 'cookie'], // donde almacenar el idioma detectado
+            order: ['navigator', 'localStorage', 'cookie'],
+            caches: ['localStorage', 'cookie'],
         },
     });
 
