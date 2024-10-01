@@ -1,10 +1,23 @@
 import React from 'react';
-import { SvgIconProps } from '../interfaces/interfaces';
+import { SvgIconProps } from '../../src/interfaces/interfaces';
 
 export const MenuIcon: React.FC<SvgIconProps> = ({ color, width }) => {
     return (
-        <svg baseProfile='tiny' viewBox='0 0 24 24' fill={color} width={width}>
-            <path d='M19 17H5c-1.103 0-2 .897-2 2s.897 2 2 2h14c1.103 0 2-.897 2-2s-.897-2-2-2zm0-7H5c-1.103 0-2 .897-2 2s.897 2 2 2h14c1.103 0 2-.897 2-2s-.897-2-2-2zm0-7H5c-1.103 0-2 .897-2 2s.897 2 2 2h14c1.103 0 2-.897 2-2s-.897-2-2-2z' />
+        <svg
+            viewBox='0 0 21 21'
+            fill='currentColor'
+            height={width}
+            width={width}
+        >
+            <g
+                fill='none'
+                fillRule='evenodd'
+                stroke={color}
+                strokeLinecap='round'
+                strokeLinejoin='round'
+            >
+                <path d='M4.5 6.5h12M4.498 10.5h11.997M4.5 14.5h11.995' />
+            </g>
         </svg>
     );
 };

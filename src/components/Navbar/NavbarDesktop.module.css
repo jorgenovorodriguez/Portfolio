@@ -94,19 +94,19 @@
 
 @media screen and (max-width: 830px) {
     .navbar {
+        width: 75%;
         flex-direction: column;
         align-items: flex-start;
     }
 
     .menu {
-        position: absolute;
-        left: 0;
-        margin-left: 5%;
+        position: sticky;
+        left: -2;
         flex-direction: column;
         align-items: flex-end;
         gap: 11px;
         z-index: 3;
-        margin-top: 100px;
+        /* margin-top: 80px; */
     }
 
     .menuButton {
@@ -132,6 +132,10 @@
 
     .menuOpen {
         display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         z-index: 1;
+        /* width: 80vh; */
+        margin-top: 150px;
     }
 }

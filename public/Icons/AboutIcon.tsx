@@ -1,5 +1,5 @@
 import React from 'react';
-import { SvgIconProps } from '../interfaces/interfaces';
+import { SvgIconProps } from '../../src/interfaces/interfaces';
 
 export const AboutIcon: React.FC<SvgIconProps> = ({ color, width }) => {
     return (

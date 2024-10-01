@@ -2,13 +2,11 @@ import React, { useEffect, useState } from 'react';
 import useField from '../../hooks/useField';
 import styles from './Contact.module.css';
 import { Modal } from '../Modal/Modal';
-import ReCAPTCHA from 'react-google-recaptcha';
 
 export const Contact: React.FC = () => {
     const [submitted, setSubmitted] = useState(false);
     const [openModal, setOpenModal] = useState(false);
     const [buttonDisabled, setButtonDisabled] = useState(true);
-    const [notRobot, setNotRobot] = useState(false);
 
     const nameField = useField({
         type: 'text',
@@ -32,8 +30,7 @@ export const Contact: React.FC = () => {
             !messageField.error &&
             nameField.value.trim() !== '' &&
             emailField.value.trim() !== '' &&
-            messageField.value.trim() !== '' &&
-            notRobot
+            messageField.value.trim() !== ''
         ) {
             setButtonDisabled(false);
         } else {
@@ -46,10 +43,9 @@ export const Contact: React.FC = () => {
         nameField.error,
         emailField.error,
         messageField.error,
-        notRobot,
     ]);
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         setSubmitted(true);
 
@@ -57,9 +53,33 @@ export const Contact: React.FC = () => {
             return;
         }
 
-        console.log('Nombre:', nameField.value);
-        console.log('Email:', emailField.value);
-        console.log('Mensaje:', messageField.value);
+        const formData = new FormData(event.target as HTMLFormElement);
+
+        formData.append('access_key', '17b54e32-d191-44f3-b7cf-7630cc4c4e34');
+
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        try {
+            const res = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Accept: 'application/json',
+                },
+                body: json,
+            });
+
+            const result = await res.json();
+            if (result.success) {
+                console.log('Success', result);
+                setOpenModal(true);
+            } else {
+                console.error('Error:', result);
+            }
+        } catch (error) {
+            console.error('Fetch error:', error);
+        }
 
         nameField.onChange({
             target: { value: '' },
@@ -72,7 +92,6 @@ export const Contact: React.FC = () => {
         } as React.ChangeEvent<HTMLTextAreaElement>);
 
         setSubmitted(false);
-        setOpenModal(true);
     };
 
     return (
@@ -82,7 +101,11 @@ export const Contact: React.FC = () => {
                 <form onSubmit={handleSubmit} className={styles.form}>
                     <div className={styles.formGroup}>
                         <label htmlFor='name'>{`Nombre`}</label>
-                        <input {...nameField} placeholder='Nombre' />
+                        <input
+                            {...nameField}
+                            placeholder='Nombre'
+                            name='first_name'
+                        />
                         {submitted && nameField.error && (
                             <span style={{ color: 'red' }}>
                                 {nameField.error}
@@ -103,10 +126,6 @@ export const Contact: React.FC = () => {
                             <p style={{ color: 'red' }}>{messageField.error}</p>
                         )}
                     </div>
-                    <ReCAPTCHA
-                        sitekey='6Ld0QFQqAAAAAIrDijlC69M3ma0N64EoiF0Udc0K'
-                        onChange={() => setNotRobot(true)}
-                    />
                     <button
                         type='submit'
                         disabled={buttonDisabled}

@@ -10,6 +10,7 @@
     z-index: 1;
     margin-left: 10%;
     margin-right: 10%;
+    margin-bottom: 200px;
 }
 
 .title {
@@ -116,9 +117,9 @@
     height: calc(100% + 4px);
     filter: blur(8px);
     animation: glowing 20s linear infinite;
-    transition: opacity 0.3s ease-in-out;
     border-radius: 10px;
-    opacity: 0;
+    opacity: 1;
+    transition: transform 0.8s ease;
 }
 
 @keyframes glowing {
@@ -133,17 +134,8 @@
     }
 }
 
-.aboutItemButton:hover::before {
-    opacity: 1;
-}
-
-.aboutItemButton:active:after {
-    background: transparent;
-}
-
 .aboutItemButton:active {
-    color: #000;
-    font-weight: bold;
+    transform: scale(1.2);
 }
 
 .aboutItemButton p {

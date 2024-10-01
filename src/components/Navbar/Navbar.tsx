@@ -1,95 +1,20 @@
-import { useEffect, useRef, useState, MouseEvent } from 'react';
-import styles from './Navbar.module.css';
-import { HomeIcon } from '../../../public/Icons/HomeIcon';
-import { AboutIcon } from '../../../public/Icons/AboutIcon';
-import { ExperienceIcon } from '../../../public/Icons/ExperienceIcon';
-import { TechnologiesIcon } from '../../../public/Icons/TechnologiesIcon';
-import { MenuIcon } from '../../../public/Icons/MenuIcon';
-import { CloseIcon } from '../../../public/Icons/CloseIcon';
-import { ContactIcon } from '../../../public/Icons/ContactIcon';
-
-type MenuRef = HTMLDivElement | null;
+import { useEffect, useState } from 'react';
+import { NavbarMobile } from './NavbarMobile';
+import { NavbarDesktop } from './NavbarDesktop';
 
 export const Navbar: React.FC = () => {
-    const [menuOpen, setMenuOpen] = useState<boolean>(false);
+    const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 830);
 
-    const menuRef = useRef<MenuRef>(null);
-
-    const handleClickOutside = (e: MouseEvent<Document>) => {
-        if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
-            setMenuOpen(false);
-        }
+    const handleResize = () => {
+        setIsMobile(window.innerWidth < 830);
     };
 
     useEffect(() => {
-        if (!menuOpen) return;
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
-        document.addEventListener('mousedown', handleClickOutside as any);
-        return () =>
-            document.removeEventListener(
-                'mousedown',
-                handleClickOutside as any
-            );
-    }, [menuOpen]);
-
-    return (
-        <nav className={styles.navbar}>
-            <div className={styles.menu} ref={menuRef}>
-                <div
-                    className={styles.menuButton}
-                    onClick={() => setMenuOpen(!menuOpen)}
-                >
-                    {' '}
-                    {menuOpen ? (
-                        <CloseIcon color={`#FFFFFF`} width={`2rem`} />
-                    ) : (
-                        <MenuIcon color={`#FFFFFF`} width={`2rem`} />
-                    )}
-                </div>
-                <ul
-                    className={`${styles.menuItems} ${
-                        menuOpen && styles.menuOpen
-                    }`}
-                    onClick={() => setMenuOpen(false)}
-                >
-                    <li>
-                        <div>
-                            <HomeIcon color={`#FFFFFF`} width={`1.2rem`} />
-                            <a href='/'>{`Home`}</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <AboutIcon color={`#FFFFFF`} width={`1.2rem`} />
-                            <a href='#about'>{`Sobre mí`}</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <ExperienceIcon
-                                color={`#FFFFFF`}
-                                width={`1.2rem`}
-                            />
-                            <a href='#experience'>{`Experiencia`}</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <TechnologiesIcon
-                                color={`#FFFFFF`}
-                                width={`1.2rem`}
-                            />
-                            <a href='#technologies'>{`Tecnologías`}</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <ContactIcon color={`#FFFFFF`} width={`1.2rem`} />
-                            <a href='#contact'>{`Contacto`}</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    );
+    return <>{isMobile ? <NavbarMobile /> : <NavbarDesktop />}</>;
 };
