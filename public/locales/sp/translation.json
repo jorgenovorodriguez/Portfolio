@@ -16,8 +16,8 @@
     "Home" : "Home",
     "Contacto" : "Contacto",
     "Tecnologías" : "Tecnologías",
-    "Campo inválido" : "Campo inválido.",
+    "Campo inválido." : "Campo inválido.",
     " El nombre no puede estar vacío." : " El nombre no puede estar vacío.",
     " El mensaje no puede estar vacío." : " El mensaje no puede estar vacío.",
-    " Asegurese de que tiene formato de Email." : " Asegurese de que tiene formato de Email."
+    " Asegúrese de que tiene formato de Email." : " Asegurese de que tiene formato de Email."
 }

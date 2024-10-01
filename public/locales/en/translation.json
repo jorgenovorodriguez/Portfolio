@@ -16,8 +16,8 @@
     "Home" : "Home",
     "Contacto" : "Contact",
     "Tecnologías" : "Technologies",
-    "Campo inválido" : "Invalid field",
+    "Campo inválido." : "Invalid field.",
     " El nombre no puede estar vacío." : " The name cannot be empty.",
     " El mensaje no puede estar vacío." : " The message cannot be empty.",
-    " Asegurese de que tiene formato de Email." : " Make sure the email format is correct."
+    " Asegúrese de que tiene formato de Email." : " Make sure the email format is correct."
 }
