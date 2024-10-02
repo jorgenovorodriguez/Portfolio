@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import useField from '../../hooks/useField';
 import styles from './Contact.module.css';
 import { Modal } from '../Modal/Modal';
@@ -8,6 +8,7 @@ import { postMessageData } from '../../services/apiServices';
 export const Contact: React.FC = () => {
     const [openModal, setOpenModal] = useState<boolean>(false);
     const [buttonDisabled, setButtonDisabled] = useState<boolean>(true);
+    const [loading, setLoading] = useState<boolean>(true);
 
     const resetFormFields = () => {
         nameField.reset();
@@ -54,47 +55,25 @@ export const Contact: React.FC = () => {
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-
         if (nameField.error || emailField.error || messageField.error) {
             return;
         }
 
-        const formData = new FormData(event.target as HTMLFormElement);
-
-        formData.append('access_key', '17b54e32-d191-44f3-b7cf-7630cc4c4e34');
-
-        const object = Object.fromEntries(formData);
-        const json = JSON.stringify(object);
+        const data = {
+            name: nameField.value,
+            email: emailField.value,
+            message: messageField.value,
+        };
 
         try {
-            const res = await fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    Accept: 'application/json',
-                },
-                body: json,
-            });
-            const data = {
-                name: nameField.value,
-                email: emailField.value,
-                message: messageField.value,
-            };
-
             await postMessageData(data);
-
-            const result = await res.json();
-            if (result.success) {
-                console.log('Success', result);
-                setOpenModal(true);
-            } else {
-                console.error('Error:', result);
-            }
-        } catch (error) {
-            console.error('Fetch error:', error);
+            setOpenModal(true);
+            resetFormFields();
+        } catch (err) {
+            console.error(err);
+        } finally {
+            setLoading(false);
         }
-
-        resetFormFields();
     };
 
     return (

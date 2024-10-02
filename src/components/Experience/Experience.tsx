@@ -12,24 +12,21 @@ import { getExperienceData } from '../../services/apiServices';
 import { ExperienceData } from '../../interfaces/interfaces';
 
 export const Experience: React.FC = () => {
-    const [data, setData] = useState<ExperienceData[]>([]);
-    console.log(data);
-
+    const [data, setData] = useState<ExperienceData[]>();
     const [loading, setLoading] = useState<boolean>(true);
-    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         const fetchData = async () => {
+            setLoading(true);
             try {
                 const experienceData = await getExperienceData();
                 setData(experienceData);
             } catch (err) {
-                setError('Error al cargar los datos');
+                console.error(err);
             } finally {
                 setLoading(false);
             }
         };
-
         fetchData();
     }, []);
 
