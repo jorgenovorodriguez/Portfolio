@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import useField from '../../hooks/useField';
 import styles from './Contact.module.css';
 import { Modal } from '../Modal/Modal';
 import { t } from 'i18next';
+import { postMessageData } from '../../services/apiServices';
 
 export const Contact: React.FC = () => {
-    const [openModal, setOpenModal] = useState(false);
-    const [buttonDisabled, setButtonDisabled] = useState(true);
+    const [openModal, setOpenModal] = useState<boolean>(false);
+    const [buttonDisabled, setButtonDisabled] = useState<boolean>(true);
 
     const resetFormFields = () => {
         nameField.reset();
@@ -74,6 +75,13 @@ export const Contact: React.FC = () => {
                 },
                 body: json,
             });
+            const data = {
+                name: nameField.value,
+                email: emailField.value,
+                message: messageField.value,
+            };
+
+            await postMessageData(data);
 
             const result = await res.json();
             if (result.success) {

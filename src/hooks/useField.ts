@@ -1,9 +1,7 @@
 import { t } from 'i18next';
 import { useState } from 'react';
-interface UseFieldProps {
-    type: string;
-    validate?: (value: string) => boolean;
-}
+
+import { UseFieldProps } from '../interfaces/interfaces';
 
 const useField = ({ type, validate}: UseFieldProps) => {
     const [value, setValue] = useState<string>('');

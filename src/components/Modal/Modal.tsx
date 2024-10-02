@@ -1,10 +1,7 @@
 import React from 'react';
-import styles from './Modal.module.css'; // Asegúrate de importar los estilos
+import styles from './Modal.module.css';
 
-interface ModalProps {
-    text: string;
-    onClose: () => void;
-}
+import { ModalProps } from '../../interfaces/interfaces';
 
 import { CloseIcon } from '../../../public/Icons/CloseIcon';
 

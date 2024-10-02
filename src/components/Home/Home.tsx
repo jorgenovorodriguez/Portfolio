@@ -6,7 +6,7 @@ import { LInkedinIcon } from '../../../public/Icons/LInkedinIcon';
 import { t } from 'i18next';
 
 export const Home: React.FC = () => {
-    const homeImage: string = 'hero/heroImage.png';
+    const homeImage: string = 'home/homeImage.png';
 
     return (
         <section className={styles.container}>
