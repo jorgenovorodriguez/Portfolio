@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import styles from './Footer.module.css';
 import { getImageUrl } from '../../utils';
+import { Modal } from '../Modal/Modal';
+import { POLICY_TEXT } from '../../content/texts';
+import { t } from 'i18next';
 
 export const Footer = () => {
+    const [openPolicy, setOpenPolicy] = useState(false);
+
     return (
         <footer id='contact' className={styles.container}>
             <ul className={styles.links}>
@@ -40,6 +45,23 @@ export const Footer = () => {
                     </div>
                 </li>
             </ul>
+            <div className={styles.bottom}>
+                <div>
+                    <p>© 2024 Jorge Novo Rodríguez</p>
+                </div>
+                <div
+                    className={styles.linkable}
+                    onClick={() => setOpenPolicy(true)}
+                >
+                    <p>{t(`Política de privacidad`)}</p>
+                </div>
+            </div>
+            {openPolicy && (
+                <Modal
+                    text={t(POLICY_TEXT)}
+                    onClose={() => setOpenPolicy(false)}
+                />
+            )}
         </footer>
     );
 };

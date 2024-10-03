@@ -4,11 +4,12 @@ import styles from './Contact.module.css';
 import { Modal } from '../Modal/Modal';
 import { t } from 'i18next';
 import { postMessageData } from '../../services/apiServices';
+import { Loading } from '../Loading/Loading';
 
 export const Contact: React.FC = () => {
     const [openModal, setOpenModal] = useState<boolean>(false);
     const [buttonDisabled, setButtonDisabled] = useState<boolean>(true);
-    const [loading, setLoading] = useState<boolean>(true);
+    const [loading, setLoading] = useState<boolean>(false);
 
     const resetFormFields = () => {
         nameField.reset();
@@ -54,6 +55,7 @@ export const Contact: React.FC = () => {
     ]);
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+        setLoading(true);
         event.preventDefault();
         if (nameField.error || emailField.error || messageField.error) {
             return;
@@ -124,6 +126,7 @@ export const Contact: React.FC = () => {
                     </button>
                 </form>
             </div>
+            {loading && <Loading />}
             {openModal && (
                 <Modal
                     text={t(`Mensaje enviado con éxito`)}

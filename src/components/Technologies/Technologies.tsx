@@ -3,23 +3,14 @@ import styles from './Technologies.module.css';
 import skills from '../../data/skills.json';
 import { getImageUrl } from '../../utils';
 import { t } from 'i18next';
+import { TECHNOLOGIES_TEXT_2 } from '../../content/texts';
 
 export const Technologies: React.FC = () => {
     return (
         <section id='technologies'>
             <div className={styles.container}>
                 <h2>{t(`Tecnologías`)}</h2>
-                <p>
-                    {t(
-                        `Mi área principal de especialización es el desarrollo Frontend pero mi formación es FullStack.`
-                    )}
-                </p>
-                <br />
-                <p>
-                    {t(
-                        `Creación de aplicaciones web con React y Vite, gestión de estados globales con Redux Toolkit y tipado con TypeScript. Gestión de la información en tiempo real con WebSockets. Diseño responsive con CSS y uso de frameworks y librerías como Tailwind, Bootstrap o Mui. Creación de prototipos basados en principios UX/UI con Figma. Manejo de Backend con Node y Express, bases de datos con MySql, conocimientos de API REST. Control de versiones con Git.`
-                    )}
-                </p>
+                <p>{t(TECHNOLOGIES_TEXT_2)}</p>
             </div>
             <div className={styles.carouselContainer}>
                 <div className={styles.carousel}>

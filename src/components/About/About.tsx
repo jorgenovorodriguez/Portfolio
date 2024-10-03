@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './About.module.css';
 import { getImageUrl, redirectToWebsite } from '../../utils';
 import { t } from 'i18next';
+import { ABOUT_TEXT_1, ABOUT_TEXT_2, ABOUT_TEXT_3 } from '../../content/texts';
 
 const cvUrl =
     'https://drive.google.com/file/d/18j1xN8gShz8PIoQRHEdU_0KQG5Ytx6Cr/view?usp=sharing';
@@ -15,17 +16,11 @@ export const About: React.FC = () => {
                 <div className={styles.aboutItems}>
                     <div className={styles.aboutItem}>
                         <div>
-                            <p>
-                                {t(
-                                    `Partiendo de la base de HTML, CSS Y JavaScript me especializado en la creación de aplicaciones con React. Me considero una persona autodidacta y comprometida, con capacidad para el aprendizaje y el trabajo en equipo.`
-                                )}
-                            </p>
+                            <p>{t(ABOUT_TEXT_1)}</p>
                             <br />
-                            <p>
-                                {t(
-                                    `Si quieres saber más no dudes en descargar mi currículum`
-                                )}
-                            </p>
+                            <p>{t(ABOUT_TEXT_2)}</p>
+                            <br />
+                            <p>{t(ABOUT_TEXT_3)}</p>
                         </div>
                     </div>
                     <div

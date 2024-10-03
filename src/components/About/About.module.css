@@ -122,6 +122,16 @@
     transition: transform 0.8s ease;
 }
 
+.customLink {
+    text-decoration: none;
+    color: inherit;
+}
+
+.customLink:hover {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
 @keyframes glowing {
     0% {
         background-position: 0 0;

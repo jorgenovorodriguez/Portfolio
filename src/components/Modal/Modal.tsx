@@ -11,7 +11,7 @@ export const Modal: React.FC<ModalProps> = ({ text, onClose }) => {
             <div className={styles.modalOverlay} onClick={onClose}>
                 <div className={styles.modal}>
                     <div className={styles.closeIcon} onClick={onClose}>
-                        <CloseIcon color={`#FFFFFF`} width={`2rem`} />
+                        <CloseIcon color={`#a0a0a0`} width={`2rem`} />
                     </div>
 
                     <p>{text}</p>
