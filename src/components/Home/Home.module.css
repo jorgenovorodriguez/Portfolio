@@ -19,17 +19,17 @@
     z-index: 1;
 }
 
-.content div {
+.linkedinIcon {
     cursor: pointer;
     transition: transform 0.8s ease;
 }
 
-.content div:hover {
+.linkedinIcon:hover {
     transform: scale(1.2);
 }
 
 .title {
-    font-size: 72px;
+    font-size: 62px;
     font-weight: 900;
     margin-bottom: 33px;
     font-family: var(--font-roboto);
@@ -46,7 +46,27 @@
 .description {
     font-size: 30px;
     font-family: var(--font-roboto);
-    margin-bottom: 52px;
+    margin-bottom: 25px;
+}
+
+.copyMail {
+    display: flex;
+    display: row;
+    gap: 5px;
+    margin-bottom: 55px;
+}
+
+.copyMail p {
+    font-family: var(--font-roboto);
+}
+
+.copyMail div {
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.copyMail div:active {
+    transform: scale(1.2);
 }
 
 .contactBtn {
