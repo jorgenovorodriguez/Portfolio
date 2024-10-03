@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { ExperienceData, MessageData } from '../interfaces/interfaces';
 
-const BASE_URL = 'http://localhost:4000/api';
+const BASE_URL = 'https://portfoliobackend-production-da58.up.railway.app/api';
 
 export const getExperienceData = async (): Promise<ExperienceData[]> => {
     try {
