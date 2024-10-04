@@ -28,3 +28,11 @@ export const formatDateToMonthYear = (dateString: string): string => {
         return dateString; 
     }
 };
+
+export const copyText = async (texto: string) => {
+    try {
+        await navigator.clipboard.writeText(texto);
+    } catch (err) {
+        console.error(err);
+    }
+};

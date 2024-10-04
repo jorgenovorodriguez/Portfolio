@@ -7,11 +7,13 @@ import { Contact } from './components/Contact/Contact';
 import { Technologies } from './components/Technologies/Technologies';
 import { Footer } from './components/Footer/Footer';
 import './i18n';
+import MouseFollower from './components/MouseFollower/MouseFollower';
 
 const App = () => {
     return (
         <>
             <div className={styles.App}>
+                <MouseFollower />
                 <Navbar />
                 <Home />
                 <About />
