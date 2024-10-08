@@ -101,7 +101,7 @@
 .historyItemDetails p {
     font-size: 20px;
     font-weight: 300;
-    color: #bababa;
+    color: var(--color-text-secondary);
     margin-bottom: 5px;
 }
 
@@ -111,6 +111,7 @@
     font-size: 25px;
     list-style-type: none;
     margin-bottom: 5px;
+    color: var(--color-text-secondary);
 }
 
 @media screen and (max-width: 830px) {
@@ -146,11 +147,11 @@
     .historyItemDetails p {
         font-size: 20px;
         font-weight: 200;
-        color: #bababa;
+        color: var(--color-text-secondary);
     }
 
     .historyItemDetails ul {
         font-size: 15px;
-        font-weight: 200;
+        font-weight: 300;
     }
 }

@@ -34,7 +34,7 @@
 }
 
 .aboutItems {
-    color: var(--color-text);
+    color: var(--color-text-secondary);
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -149,7 +149,7 @@
 }
 
 .aboutItemButton p {
-    font-family: var(--font-Raleway);
+    font-family: var(--font-roboto);
     font-size: 2rem;
     line-height: 1.6;
     text-align: center;
