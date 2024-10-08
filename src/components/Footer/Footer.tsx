@@ -17,16 +17,18 @@ export const Footer = () => {
                         src={getImageUrl('contact/emailIcon.png')}
                         alt='Email icon'
                     />
-                    <a href='mailto:jorge.novo.rodriguez.93@gmail.com'>
-                        jorge.novo.rodriguez.93@gmail.com
-                    </a>
+                    <a>jorge.novo.rodriguez.93@gmail.com</a>
                 </li>
                 <li className={styles.link}>
                     <img
                         src={getImageUrl('contact/linkedinIcon.png')}
                         alt='LinkedIn icon'
                     />
-                    <a href='https://www.linkedin.com/in/jorgenovorodriguez/'>
+                    <a
+                        href='https://www.linkedin.com/in/jorgenovorodriguez/'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                    >
                         linkedin.com/in/jorgenovorodriguez
                     </a>
                 </li>
@@ -36,10 +38,18 @@ export const Footer = () => {
                         alt='Github icon'
                     />
                     <div>
-                        <a href='https://github.com/jorgenovorodriguez'>
+                        <a
+                            href='https://github.com/jorgenovorodriguez'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                        >
                             github.com/jorgenovorodriguez
                         </a>
-                        <a href='https://github.com/gradhoc-jnovo'>
+                        <a
+                            href='https://github.com/gradhoc-jnovo'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                        >
                             github.com/gradhoc-jnovo
                         </a>
                     </div>

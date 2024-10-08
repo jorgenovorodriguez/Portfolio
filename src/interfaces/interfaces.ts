@@ -23,6 +23,7 @@ export interface ExperienceData {
   experiences: string;
   imageSrc: string;
   link: string;
+  referenceLink?: string; 
 }
 
 export interface MessageData {

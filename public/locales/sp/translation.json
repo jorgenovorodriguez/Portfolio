@@ -3,7 +3,7 @@
     "Desarrollador de FrontEnd": "Desarrollador de FrontEnd",
     "Sobre mí": "Sobre mí",
     "Partiendo de la base de HTML, CSS Y JavaScript me especializado en la creación de aplicaciones con React. Me considero una persona autodidacta y comprometida, con capacidad para el aprendizaje y el trabajo en equipo." : "Partiendo de la base de HTML, CSS Y JavaScript me especializado en la creación de aplicaciones con React. Me considero una persona autodidacta y comprometida, con capacidad para el aprendizaje y el trabajo en equipo.",
-    "Si quieres saber más no dudes en descargar mi currículum" : "Si quieres saber más no dudes en descargar mi currículum",
+    "Si quieres saber más no dudes en descargar mi currículum." : "Si quieres saber más no dudes en descargar mi currículum.",
     "Descargar Cv" : "Descargar Cv",
     "Experiencia" : "Experiencia",
     "Mi área principal de especialización es el desarrollo Frontend pero mi formación es FullStack. Partiendo de la base de HTML, CSS y JavaScript me he especializado en la creación de aplicaciones con React.": "Mi área principal de especialización es el desarrollo Frontend pero mi formación es FullStack. Partiendo de la base de HTML, CSS y JavaScript me he especializado en la creación de aplicaciones con React.",
@@ -35,5 +35,6 @@
     "Diseño de interfaces responsivas mediante CSS y frameworks como Tailwind, Bootstrap y Material-UI (Mui). Prototipado basado en principios de UX/UI con Figma para garantizar una experiencia de usuario fluida." : "Diseño de interfaces responsivas mediante CSS y frameworks como Tailwind, Bootstrap y Material-UI (Mui). Prototipado basado en principios de UX/UI con Figma para garantizar una experiencia de usuario fluida.",
     "Manejo de Node.js y Express para construir APIs eficientes, trabajando con bases de datos MySQL y aplicando principios de diseño de API REST. Uso de Postman para la prueba y documentación de APIs." : "Manejo de Node.js y Express para construir APIs eficientes, trabajando con bases de datos MySQL y aplicando principios de diseño de API REST. Uso de Postman para la prueba y documentación de APIs.",
     "Uso de Git para el control de versiones, facilitando la colaboración y el seguimiento de cambios en el código." : "Uso de Git para el control de versiones, facilitando la colaboración y el seguimiento de cambios en el código.",
-    "Utilización de herramientas como Jira para la documentación de proyectos y el seguimiento de tareas, asegurando una comunicación efectiva dentro del equipo." : "Utilización de herramientas como Jira para la documentación de proyectos y el seguimiento de tareas, asegurando una comunicación efectiva dentro del equipo."
+    "Utilización de herramientas como Jira para la documentación de proyectos y el seguimiento de tareas, asegurando una comunicación efectiva dentro del equipo." : "Utilización de herramientas como Jira para la documentación de proyectos y el seguimiento de tareas, asegurando una comunicación efectiva dentro del equipo.",
+    "Referencias" : "Referencias"
 }

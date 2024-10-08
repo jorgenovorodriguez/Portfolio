@@ -5,7 +5,7 @@ export const ABOUT_TEXT_1 =
 export const ABOUT_TEXT_2 = `Comencé mi formación de manera autodidácta, pasando luego a hacer un bootcamp de programación web en Hack a Boss. Por suerte he podido seguir ampliando mis conocimientos gracias a mi experiencia laboral, donde me he encontrado con compañeros de los que he aprendido mucho.`
 
 export const ABOUT_TEXT_3 = 
-    `Si quieres saber más no dudes en descargar mi currículum`
+    `Si quieres saber más no dudes en descargar mi currículum.`
 
 export const TECH_TEXT_1 = 'Creación de soluciones dinámicas y eficientes utilizando React y Vite. Gestión de estados globales con Redux Toolkit y tipado robusto a través de TypeScript.'
 

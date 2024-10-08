@@ -15,12 +15,23 @@ export const Experience: React.FC = () => {
     const [data, setData] = useState<ExperienceData[]>();
     const [loading, setLoading] = useState<boolean>(true);
 
+    const gradhocReference =
+        'https://drive.google.com/file/d/1EzbGO6_NWo6_PD8Np_WjSxYSUf4RZUCp/view?usp=sharing';
+
     useEffect(() => {
         const fetchData = async () => {
             setLoading(true);
             try {
                 const experienceData = await getExperienceData();
-                setData(experienceData);
+
+                const updatedData = experienceData.map((item) => {
+                    if (item.id === 1) {
+                        return { ...item, referenceLink: gradhocReference };
+                    }
+                    return item;
+                });
+
+                setData(updatedData);
             } catch (err) {
                 console.error(err);
             } finally {
@@ -64,6 +75,17 @@ export const Experience: React.FC = () => {
                                         <li key={id}>
                                             {historyItem.experiences}
                                         </li>
+                                        {historyItem?.referenceLink && (
+                                            <a
+                                                href={
+                                                    historyItem?.referenceLink
+                                                }
+                                                target='_blank'
+                                                rel='noopener noreferrer'
+                                            >
+                                                {t(`Referencias`)}
+                                            </a>
+                                        )}
                                     </ul>
                                 </div>
                             </li>

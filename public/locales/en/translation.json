@@ -3,7 +3,7 @@
     "Desarrollador de FrontEnd": "FrontEnd Developer",
     "Sobre mí": "About me",
     "Partiendo de la base de HTML, CSS Y JavaScript me especializado en la creación de aplicaciones con React. Me considero una persona autodidacta y comprometida, con capacidad para el aprendizaje y el trabajo en equipo." : "Starting from the basics of HTML, CSS, and JavaScript, I have specialized in creating applications with React. I consider myself a self-taught and committed person, with the ability to learn and work in a team.",
-    "Si quieres saber más no dudes en descargar mi currículum" : "If you want to know more, don't hesitate to download my Cv",
+    "Si quieres saber más no dudes en descargar mi currículum." : "If you want to know more, don't hesitate to download my Cv.",
     "Descargar Cv" : "Download Cv",
     "Experiencia" : "Experience",
     "Mi área principal de especialización es el desarrollo Frontend pero mi formación es FullStack. Partiendo de la base de HTML, CSS y JavaScript me he especializado en la creación de aplicaciones con React.": "My main area of specialization is Frontend development, but my training is FullStack. Starting with HTML, CSS, and JavaScript, I have specialized in creating applications with React.",
@@ -35,5 +35,6 @@
     "Diseño de interfaces responsivas mediante CSS y frameworks como Tailwind, Bootstrap y Material-UI (Mui). Prototipado basado en principios de UX/UI con Figma para garantizar una experiencia de usuario fluida.": "Design of responsive interfaces using CSS and frameworks such as Tailwind, Bootstrap, and Material-UI (Mui). Prototyping based on UX/UI principles with Figma to ensure a smooth user experience.",
     "Manejo de Node.js y Express para construir APIs eficientes, trabajando con bases de datos MySQL y aplicando principios de diseño de API REST. Uso de Postman para la prueba y documentación de APIs.": "Using Node.js and Express to build efficient APIs, working with MySQL databases and applying REST API design principles. Using Postman for testing and documenting APIs.",
     "Uso de Git para el control de versiones, facilitando la colaboración y el seguimiento de cambios en el código.": "Using Git for version control, facilitating collaboration and tracking changes in the code.",
-    "Utilización de herramientas como Jira para la documentación de proyectos y el seguimiento de tareas, asegurando una comunicación efectiva dentro del equipo.": "Utilization of tools like Jira for project documentation and task tracking, ensuring effective communication within the team."
+    "Utilización de herramientas como Jira para la documentación de proyectos y el seguimiento de tareas, asegurando una comunicación efectiva dentro del equipo.": "Utilization of tools like Jira for project documentation and task tracking, ensuring effective communication within the team.",
+    "Referencias" : "References"
 }

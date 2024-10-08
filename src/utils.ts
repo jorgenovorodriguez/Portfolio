@@ -8,7 +8,11 @@ export const getImageUrl = (path: string): string | undefined  => {
 
 export const redirectToWebsite = (url: string): void => {
     try {
-        window.open(url, '_blank');
+        const newWindow = window.open(url, '_blank');
+        
+        if (newWindow) {
+            newWindow.opener = null; 
+        }
     } catch (error) {
         console.error(error);
     }

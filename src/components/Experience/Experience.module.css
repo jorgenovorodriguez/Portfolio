@@ -114,6 +114,12 @@
     color: var(--color-text-secondary);
 }
 
+.historyItemDetails ul a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
 @media screen and (max-width: 830px) {
     .content {
         flex-direction: column;
@@ -127,7 +133,9 @@
     }
 
     .historyItemDetails:hover {
-        display: none;
+        transform: none;
+        backdrop-filter: none;
+        opacity: 1;
     }
 
     .historyItemImgContainer {
