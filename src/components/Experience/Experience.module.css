@@ -84,7 +84,6 @@
     transform: scale(1.5);
     backdrop-filter: blur(10px);
     opacity: 1;
-    /* padding: 20px; */
 }
 
 .historyItemDetails h3 {
