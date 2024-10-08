@@ -1,5 +1,5 @@
 {
-    "Hola, soy Jorge": "Hello, I'm Jorge",
+    "Hola, soy Jorge.": "Hi, I'm Jorge.",
     "Desarrollador de FrontEnd": "FrontEnd Developer",
     "Sobre mí": "About me",
     "Partiendo de la base de HTML, CSS Y JavaScript me especializado en la creación de aplicaciones con React. Me considero una persona autodidacta y comprometida, con capacidad para el aprendizaje y el trabajo en equipo." : "Starting from the basics of HTML, CSS, and JavaScript, I have specialized in creating applications with React. I consider myself a self-taught and committed person, with the ability to learn and work in a team.",
@@ -22,5 +22,7 @@
     " Asegúrese de que tiene formato de Email." : " Make sure the email format is correct.",
     "Política de privacidad" : "Privacy Policy",
     "De conformidad con lo establecido en la Ley de Protección de Datos de Carácter Personal y Reglamento UE 2016/679, en caso de que nos envíe algún correo electrónico a la dirección indicada en la misma, o rellene algún formulario de recogida de datos, le informamos de que los datos de carácter personal que nos proporcione, serán registrados en el fichero del que es responsable jorgenovorodriguez.netlify.app, con la finalidad de gestionar su consulta." : "In accordance with the provisions of the Personal Data Protection Law and EU Regulation 2016/679, in the event that you send us an email to the address indicated, or fill out a data collection form, we inform you that the personal data you provide will be registered in the file for which jorgenovorodriguez.netlify.app is responsible, with the purpose of managing your inquiry.",
-    "Comencé mi formación de manera autodidácta, pasando luego a hacer un bootcamp de programación web en Hack a Boss. Por suerte he podido seguir ampliando mis conocimientos gracias a mi experiencia laboral, donde me he encontrado con compañeros de los que he aprendido mucho.": "I started my training in a self-taught way, later attending a web programming bootcamp at Hack a Boss. Fortunately, I have been able to continue expanding my knowledge thanks to my work experience, where I have met colleagues from whom I have learned a lot."
+    "Comencé mi formación de manera autodidácta, pasando luego a hacer un bootcamp de programación web en Hack a Boss. Por suerte he podido seguir ampliando mis conocimientos gracias a mi experiencia laboral, donde me he encontrado con compañeros de los que he aprendido mucho.": "I started my training in a self-taught way, later attending a web programming bootcamp at Hack a Boss. Fortunately, I have been able to continue expanding my knowledge thanks to my work experience, where I have met colleagues from whom I have learned a lot.",
+    "Ese es mi perfil de linkedIn." : "This is my LinkedIn profile.",
+    "Ese es mi email, puedes escribirme cuando quieras." : "This is my email, you can write to me anytime."
 }

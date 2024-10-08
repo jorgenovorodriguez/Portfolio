@@ -18,7 +18,17 @@ export const Home: React.FC = () => {
                     {t(`Desarrollador de FrontEnd`)}
                 </p>
                 <div className={styles.copyMail}>
-                    <p>{texto}</p>
+                    <p
+                        data-tooltip={
+                            t(
+                                `Ese es mi email, puedes escribirme cuando quieras.`
+                            ) +
+                            ' ' +
+                            '😉'
+                        }
+                    >
+                        {texto}
+                    </p>
                     <div onClick={() => copyText(texto)}>
                         <CopyIcon color='white' width='1.2rem' />{' '}
                     </div>

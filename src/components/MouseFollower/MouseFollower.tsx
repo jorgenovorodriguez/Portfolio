@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './MouseFollower.module.css';
 
 const MouseFollower: React.FC = () => {
     const followerRef = useRef<HTMLDivElement | null>(null);
+    const [tooltipText, setTooltipText] = useState('');
 
     useEffect(() => {
         const handleMouseMove = (event: MouseEvent) => {
@@ -11,6 +12,14 @@ const MouseFollower: React.FC = () => {
                 followerRef.current.style.transform = `translate(${
                     event.clientX + offset
                 }px, ${event.clientY + offset}px)`;
+            }
+
+            const target = event.target as HTMLElement;
+
+            if (target && target.dataset.tooltip) {
+                setTooltipText(target.dataset.tooltip);
+            } else {
+                setTooltipText('');
             }
         };
 
@@ -21,7 +30,11 @@ const MouseFollower: React.FC = () => {
         };
     }, []);
 
-    return <div className={styles.follower} ref={followerRef}></div>;
+    return (
+        <div className={styles.follower} ref={followerRef}>
+            {tooltipText && <div className={styles.tooltip}>{tooltipText}</div>}
+        </div>
+    );
 };
 
 export default MouseFollower;

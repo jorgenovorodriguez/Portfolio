@@ -1,5 +1,6 @@
 import React from 'react';
 import { SvgIconProps } from '../../src/interfaces/interfaces';
+import { t } from 'i18next';
 
 export const CopyIcon: React.FC<SvgIconProps> = ({ color, width }) => {
     return (
