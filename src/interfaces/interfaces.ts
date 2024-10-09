@@ -31,3 +31,30 @@ export interface MessageData {
   email: string;
   message: string;
 }
+
+export interface ProjectCardData {
+  title: string;
+  imageSrc: string;
+}
+
+export interface ProjectCardProps {
+  project: ProjectCardData;
+}
+
+export interface Project {
+  title: string;
+  category: string;
+  imageSrc: string;
+  description: string;
+  skills: string[];
+  gitLinkFront: string;
+  gitLinkBack: string;
+}
+
+export interface ProjectModalProps {
+  project: Project;
+  onClose: () => void;
+  onPrevious: () => void;
+  onNext: () => void;
+
+}

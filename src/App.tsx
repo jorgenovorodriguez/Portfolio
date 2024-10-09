@@ -6,6 +6,7 @@ import { Experience } from './components/Experience/Experience';
 import { Contact } from './components/Contact/Contact';
 import { Technologies } from './components/Technologies/Technologies';
 import { Footer } from './components/Footer/Footer';
+import { Projects } from './components/Projects/Projects';
 import './i18n';
 import MouseFollower from './components/MouseFollower/MouseFollower';
 
@@ -19,6 +20,7 @@ const App = () => {
                 <About />
                 <Experience />
                 <Technologies />
+                <Projects />
                 <Contact />
                 <Footer />
             </div>

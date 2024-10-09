@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Tilt from 'react-parallax-tilt';
 import styles from './About.module.css';
 import { getImageUrl, redirectToWebsite } from '../../utils';
 import { t } from 'i18next';
@@ -23,16 +23,23 @@ export const About: React.FC = () => {
                             <p>{t(ABOUT_TEXT_3)}</p>
                         </div>
                     </div>
-                    <div
-                        className={styles.aboutItemButton}
-                        onClick={() => redirectToWebsite(cvUrl)}
+                    <Tilt
+                        tiltMaxAngleX={35}
+                        tiltMaxAngleY={35}
+                        scale={1.1}
+                        transitionSpeed={450}
                     >
-                        <img
-                            src={getImageUrl('about/cursorIcon.png')}
-                            alt='Cursor icon'
-                        />
-                        <p>{t(`Descargar Cv`)}</p>
-                    </div>
+                        <div
+                            className={styles.aboutItemButton}
+                            onClick={() => redirectToWebsite(cvUrl)}
+                        >
+                            <img
+                                src={getImageUrl('about/cursorIcon.png')}
+                                alt='Cursor icon'
+                            />
+                            <p>{t(`Descargar Cv`)}</p>
+                        </div>
+                    </Tilt>
                 </div>
             </div>
         </section>

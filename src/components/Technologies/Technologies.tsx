@@ -53,7 +53,7 @@ const techItems = [
 
 export const Technologies: React.FC = () => {
     return (
-        <section id='technologies'>
+        <section id='technologies' className={styles.technologies}>
             <div className={styles.container}>
                 <h2 className={styles.title}>{t('Tecnologías')}</h2>
                 <ul className={styles.techItems}>

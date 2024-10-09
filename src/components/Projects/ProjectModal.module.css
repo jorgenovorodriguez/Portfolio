@@ -1,0 +1,141 @@
+@import '../../vars.css';
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+.modalContent {
+    background: var(--color-bg);
+    padding: 50px;
+    border-radius: 10px;
+    width: 50%;
+    height: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-text-secondary);
+    border: solid var(--color-primary);
+}
+
+.modalContent h3 {
+    display: flex;
+    align-items: flex-start;
+    font-family: var(--font-roboto);
+    gap: 10px;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.description {
+    display: flex;
+    font-size: 25px;
+    margin: 5px 0 0;
+    font-weight: 300;
+    font-family: var(--font-roboto);
+    color: var(--color-text-secondary);
+    padding-bottom: 25px;
+    text-align: start;
+}
+
+.modalContent img {
+    width: 90%;
+    height: 60%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.modalContent ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.modalContent a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.modalContent a:hover {
+    text-decoration: underline;
+}
+
+.closeIcon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.modalContent button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.navigationButton {
+    display: flex;
+    position: absolute;
+    top: 45%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border: solid var(--color-primary);
+    border-radius: 50%;
+    font-size: 25px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--color-text-secondary);
+    background: var(--color-bg);
+    transition: transform 0.4s ease;
+}
+
+.navigationButton:hover {
+    transform: scale(1.2);
+}
+
+.prevNavigation {
+    left: -8%;
+}
+
+.nextNavigation {
+    right: -8%;
+}
+
+.animate {
+    opacity: 0.5; /* Cambia esto a lo que desees para la animación */
+}

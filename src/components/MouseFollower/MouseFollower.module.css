@@ -1,13 +1,8 @@
 @import '../../vars.css';
 
-body {
-    height: 100vh;
-    margin: 0;
-}
-
 .follower {
     position: absolute;
-    width: 60px;
+    width: 80px;
     height: 80px;
     background-image: url('../../../public/assets/follower/follower.png');
     background-size: cover;
