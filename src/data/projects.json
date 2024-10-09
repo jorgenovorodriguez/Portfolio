@@ -2,54 +2,54 @@
   {
     "title": "Gestión industrial",
     "category": "Profesional",
-    "imageSrc": "projects/industria.jpg",
+    "imageSrc": "projects/industria.webp",
     "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["react", "express", "node"],
+    "skills": ["react", "vite", "typescript", "css", "bootstrap"],
     "gitLinkFront": "https://www.github.com",
     "gitLinkBack": "https://www.github.com"
   },
   {
     "title": "Administración",
     "category": "Profesional",
-    "imageSrc": "projects/administracion.jpg",
+    "imageSrc": "projects/administracion.webp",
     "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["react", "express", "nodejs"],
+    "skills": ["react", "vite", "typescript", "css", "materialui"],
     "gitLinkFront": "https://www.github.com",
     "gitLinkBack": "https://www.github.com"
   },
   {
     "title": "Callcenter",
     "category": "Profesional",
-    "imageSrc": "projects/callcenter.jpg",
+    "imageSrc": "projects/callcenter.webp",
     "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["react", "express", "nodejs"],
+    "skills": ["react", "vite", "typescript", "css", "tailwind"],
     "gitLinkFront": "https://www.github.com",
     "gitLinkBack": "https://www.github.com"
   },
   {
     "title": "Facturador",
     "category": "Personal",
-    "imageSrc": "projects/facturador.png",
+    "imageSrc": "projects/facturador.webp",
     "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["react", "express", "nodejs"],
+    "skills": ["react", "next", "tailwind", "mysql"],
     "gitLinkFront": "https://www.github.com",
     "gitLinkBack": "https://www.github.com"
   },
   {
     "title": "Portfolio",
     "category": "Proyecto personal",
-    "imageSrc": "projects/portfolio.png",
+    "imageSrc": "projects/portfolio.webp",
     "description": "En este proyecto he tratado de crear un portfolio sencillo que me sirva como muestra de cara a la búsqueda de empleo. La parte de backend ha sido desarrollada con Node.js, consta de un pequeño servidor conectado a una base de datos MySql. En la parte de front se ha utilizado React y TypeScript con Css Modules. He utilizado Netlify para el despliegue del front y Railway para el despliegue del back.",
-    "skills": ["react", "express", "nodejs", "mysql", "typescript", "css"],
+    "skills": ["react", "vite", "express", "nodejs", "mysql", "typescript", "css"],
     "gitLinkFront": "https://www.github.com",
     "gitLinkBack": "https://www.github.com"
   },
   {
     "title": "Red Social",
     "category": "Personal",
-    "imageSrc": "projects/project.jpg",
+    "imageSrc": "projects/project.webp",
     "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["react", "express", "nodejs"],
+    "skills": ["react", "vite", "express", "nodejs", "mysql", "css"],
     "gitLinkFront": "https://www.github.com",
     "gitLinkBack": "https://www.github.com"
   }

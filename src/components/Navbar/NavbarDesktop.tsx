@@ -45,7 +45,7 @@ export const NavbarDesktop: React.FC = () => {
                     <li>
                         <div>
                             <ProjectsIcon color={`#5F73B0`} width={`1.1rem`} />
-                            <a href='#projets'>{t(`Proyectos`)}</a>
+                            <a href='#projects'>{t(`Proyectos`)}</a>
                         </div>
                     </li>
                     <li>

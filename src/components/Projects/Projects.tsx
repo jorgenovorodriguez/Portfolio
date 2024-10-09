@@ -40,17 +40,15 @@ export const Projects = () => {
         <section className={styles.container} id='projects'>
             <h2 className={styles.title}>{t('Proyectos')}</h2>
             <div className={styles.projects}>
-                {projects.map((project: Project, id: number) => {
-                    return (
-                        <div
-                            key={id}
-                            onClick={() => handleCardClick(id)}
-                            className={styles.card}
-                        >
-                            <ProjectCard project={project} />
-                        </div>
-                    );
-                })}
+                {projects.map((project: Project, id: number) => (
+                    <div
+                        key={id}
+                        onClick={() => handleCardClick(id)}
+                        className={styles.card}
+                    >
+                        <ProjectCard project={project} />
+                    </div>
+                ))}
             </div>
             {selectedProjectIndex !== null && (
                 <ProjectModal

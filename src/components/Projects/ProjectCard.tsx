@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import styles from './ProjectCard.module.css';
 import { getImageUrl } from '../../utils';
-import { ProjectCardData, ProjectCardProps } from '../../interfaces/interfaces';
+import { ProjectCardProps } from '../../interfaces/interfaces';
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
     project: { title, imageSrc },
