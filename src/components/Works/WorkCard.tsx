@@ -1,3 +1,4 @@
+import { t } from 'i18next';
 import { ProjectProps } from '../../interfaces/interfaces';
 import { capitalizeFirstLetter, getImageUrl } from '../../utils';
 import styles from './WorkCard.module.css';
@@ -12,7 +13,7 @@ export const WorkCard: React.FC<ProjectProps> = ({ project }) => {
             onClick={(e) => e.stopPropagation()}
         >
             <div className={styles.cardHeader}>
-                <h3>{title}</h3>
+                <h3>{t(title)}</h3>
             </div>
             <div className={styles.cardBody}>
                 <img
@@ -20,7 +21,7 @@ export const WorkCard: React.FC<ProjectProps> = ({ project }) => {
                     alt={`Image of ${title}`}
                     className={styles.image}
                 />
-                <p className={styles.description}>{description}</p>
+                <p className={styles.description}>{t(description)}</p>
                 <div className={styles.links}>
                     <a
                         href={gitLinkFront}
