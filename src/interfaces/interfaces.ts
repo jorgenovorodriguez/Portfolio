@@ -32,15 +32,6 @@ export interface MessageData {
   message: string;
 }
 
-export interface ProjectCardData {
-  title: string;
-  imageSrc: string;
-}
-
-export interface ProjectCardProps {
-  project: ProjectCardData;
-}
-
 export interface Project {
   title: string;
   category: string;
@@ -51,10 +42,6 @@ export interface Project {
   gitLinkBack: string;
 }
 
-export interface ProjectModalProps {
+export interface ProjectProps {
   project: Project;
-  onClose: () => void;
-  onPrevious: () => void;
-  onNext: () => void;
-
 }

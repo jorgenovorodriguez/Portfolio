@@ -6,9 +6,9 @@ import { Experience } from './components/Experience/Experience';
 import { Contact } from './components/Contact/Contact';
 import { Technologies } from './components/Technologies/Technologies';
 import { Footer } from './components/Footer/Footer';
-import { Projects } from './components/Projects/Projects';
 import './i18n';
 import MouseFollower from './components/MouseFollower/MouseFollower';
+import { Works } from './components/Works/Works';
 
 const App = () => {
     return (
@@ -20,7 +20,7 @@ const App = () => {
                 <About />
                 <Experience />
                 <Technologies />
-                <Projects />
+                <Works />
                 <Contact />
                 <Footer />
             </div>

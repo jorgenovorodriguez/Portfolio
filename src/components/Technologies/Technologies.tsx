@@ -55,7 +55,9 @@ export const Technologies: React.FC = () => {
     return (
         <section id='technologies' className={styles.technologies}>
             <div className={styles.container}>
-                <h2 className={styles.title}>{t('Tecnologías')}</h2>
+                <h2 className={`${styles.title} text-gradient`}>
+                    {t('Tecnologías')}
+                </h2>
                 <ul className={styles.techItems}>
                     {techItems?.map((item, index) => (
                         <li key={index} className={styles.techItem}>

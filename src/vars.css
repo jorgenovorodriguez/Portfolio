@@ -3,9 +3,11 @@
     --color-text: #fff;
     --color-text-secondary: #bababa;
     --color-primary: #576cbc;
+    --color-shadow-primary: #262a45;
     --color-secondary: #19376d;
     --color-dark: #0b2447;
     --color-bg: #212121;
+    --gradient-title: linear-gradient(120deg, #cedaef, var(--color-primary));
 
     /* fonts */
     --font-roboto: 'Roboto';
