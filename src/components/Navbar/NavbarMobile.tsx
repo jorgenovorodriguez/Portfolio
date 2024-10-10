@@ -7,6 +7,8 @@ import { TechnologiesIcon } from '../../../public/Icons/TechnologiesIcon';
 import { MenuIcon } from '../../../public/Icons/MenuIcon';
 import { CloseIcon } from '../../../public/Icons/CloseIcon';
 import { ContactIcon } from '../../../public/Icons/ContactIcon';
+import { ProjectsIcon } from '../../../public/Icons/ProjectsIcon';
+import { t } from 'i18next';
 
 export const NavbarMobile: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -63,6 +65,15 @@ export const NavbarMobile: React.FC = () => {
                                             width={`2.7rem`}
                                         />
                                         <a href='#technologies'>{`Tecnologías`}</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <ProjectsIcon
+                                            color={`#5F73B0`}
+                                            width={`1.5rem`}
+                                        />
+                                        <a href='#projects'>{t(`Proyectos`)}</a>
                                     </div>
                                 </li>
                                 <li>

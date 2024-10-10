@@ -43,7 +43,9 @@ export const Experience: React.FC = () => {
 
     return (
         <section className={styles.container} id='experience'>
-            <h2 className={styles.title}>{t(`Experiencia`)}</h2>
+            <h2 className={`${styles.title} text-gradient`}>
+                {t(`Experiencia`)}
+            </h2>
             <div className={styles.content}>
                 <ol className={styles.history}>
                     {data?.map((historyItem, id) => {

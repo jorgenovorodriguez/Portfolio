@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './Modal.module.css';
 
 import { ModalProps } from '../../interfaces/interfaces';
-
 import { CloseIcon } from '../../../public/Icons/CloseIcon';
 
 export const Modal: React.FC<ModalProps> = ({ text, onClose }) => {

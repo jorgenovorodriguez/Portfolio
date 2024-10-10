@@ -4,6 +4,7 @@ import { AboutIcon } from '../../../public/Icons/AboutIcon';
 import { ExperienceIcon } from '../../../public/Icons/ExperienceIcon';
 import { TechnologiesIcon } from '../../../public/Icons/TechnologiesIcon';
 import { ContactIcon } from '../../../public/Icons/ContactIcon';
+import { ProjectsIcon } from '../../../public/Icons/ProjectsIcon';
 import { t } from 'i18next';
 
 export const NavbarDesktop: React.FC = () => {
@@ -39,6 +40,12 @@ export const NavbarDesktop: React.FC = () => {
                                 width={`1.2rem`}
                             />
                             <a href='#technologies'>{t(`Tecnologías`)}</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <ProjectsIcon color={`#5F73B0`} width={`1.1rem`} />
+                            <a href='#projects'>{t(`Proyectos`)}</a>
                         </div>
                     </li>
                     <li>

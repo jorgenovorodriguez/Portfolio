@@ -1,5 +1,4 @@
 import React from 'react';
-
 import styles from './About.module.css';
 import { getImageUrl, redirectToWebsite } from '../../utils';
 import { t } from 'i18next';
@@ -11,7 +10,7 @@ const cvUrl =
 export const About: React.FC = () => {
     return (
         <section className={styles.container} id='about'>
-            <h2 className={styles.title}>{t(`Sobre mí`)}</h2>
+            <h2 className={`${styles.title} text-gradient`}>{t(`Sobre mí`)}</h2>
             <div className={styles.content}>
                 <div className={styles.aboutItems}>
                     <div className={styles.aboutItem}>
@@ -31,7 +30,7 @@ export const About: React.FC = () => {
                             src={getImageUrl('about/cursorIcon.png')}
                             alt='Cursor icon'
                         />
-                        <p>{t(`Descargar Cv`)}</p>
+                        <p className='text-gradient'>{t(`Descargar Cv`)}</p>
                     </div>
                 </div>
             </div>

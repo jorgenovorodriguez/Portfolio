@@ -8,6 +8,7 @@ import { Technologies } from './components/Technologies/Technologies';
 import { Footer } from './components/Footer/Footer';
 import './i18n';
 import MouseFollower from './components/MouseFollower/MouseFollower';
+import { Works } from './components/Works/Works';
 
 const App = () => {
     return (
@@ -19,6 +20,7 @@ const App = () => {
                 <About />
                 <Experience />
                 <Technologies />
+                <Works />
                 <Contact />
                 <Footer />
             </div>

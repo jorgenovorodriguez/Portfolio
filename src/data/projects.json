@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Gestión industrial",
+    "category": "Profesional",
+    "imageSrc": "projects/industria.jpeg",
+    "description": "Proyecto profesional, no puedo dar muchos detalles ni mostrar código por compromiso de confidencialidad. La finalidad de la aplicación es optimizar los procesos internos de instalaciones de frío industrial y comercial. En front usamos React con CSS, librerías de distintos tipos, servicios de geolocalización, consumo de servicios de IA en Python, y servicios de back en Java. ",
+    "skills": ["react", "vite", "redux", "typescript", "css", "bootstrap"],
+    "gitLinkFront": "https://github.com/gradhoc-jnovo"
+  },
+  {
+    "title": "Administración",
+    "category": "Profesional",
+    "imageSrc": "projects/administracion.webp",
+    "description": "Proyecto profesional, no puedo dar muchos detalles ni mostrar código por compromiso de confidencialidad. En este caso el proyecto consiste en una app de uso interno para poder dar de alta y administrar las instalaciones anteriormente mencionadas. En front usamos React con CSS, librerías de distintos tipos, consumo de servicios de IA en Python, y servicios de back en Java. ",
+    "skills": ["react", "vite", "redux", "typescript", "css", "materialui"],
+    "gitLinkFront": "https://github.com/gradhoc-jnovo"
+  },
+  {
+    "title": "Callcenter",
+    "category": "Profesional",
+    "imageSrc": "projects/callcenteria.jpeg",
+    "description": "Proyecto profesional, no puedo dar muchos detalles ni mostrar código por compromiso de confidencialidad. En este caso el proyecto consiste en una app gestionar indicencias en un Callcenter. En front usamos React con CSS, Tailwind, comunicación con WebSockets, consumo de servicios de IA en Python, y servicios de back en Java. ",
+    "skills": ["react", "vite", "redux", "typescript", "css", "tailwind"],
+    "gitLinkFront": "https://github.com/gradhoc-jnovo"
+  },
+  {
+    "title": "Portfolio",
+    "category": "Proyecto personal",
+    "imageSrc": "projects/portfolio.webp",
+    "description": "En este proyecto he tratado de crear un portfolio sencillo que me sirva como muestra de cara a la búsqueda de empleo. La parte de backend ha sido desarrollada con Node.js, consta de un pequeño servidor conectado a una base de datos MySql. En la parte de front se ha utilizado React y TypeScript con Css Modules. He utilizado Netlify para el despliegue del front y Railway para el despliegue del back.",
+    "skills": ["react", "vite", "express", "nodejs", "mysql", "typescript", "css"],
+    "gitLinkFront": "https://github.com/jorgenovorodriguez/Portfolio",
+    "gitLinkBack": "https://github.com/jorgenovorodriguez/portfolioBackend"
+  },
+  {
+    "title": "Red Social",
+    "category": "Personal",
+    "imageSrc": "projects/redsocial.png",
+    "description": "Proyecto final de Bootcamp, se trata de una red social deonde los usuarios pueden interactuar de diversas formas. La idea era crear un app donde se pudieran poner en contacto tatuadores y estudios. Los usuarios tienen roles, pueden publicar fotos o vídeos para mostrar su trabajo, añadiendo ubicación, categorías... Para el backend se uso Node y Express conectado a una base de datos MySql, en la parte de frontend se uso React con CSS.",
+    "skills": ["react", "vite", "express", "nodejs", "mysql", "css"],
+    "gitLinkFront": "https://github.com/jorgenovorodriguez/RedSocialFrontEnd",
+    "gitLinkBack": "https://github.com/jorgenovorodriguez/RedSocialBackEnd"
+  },
+  {
+    "title": "Facturador",
+    "category": "Personal",
+    "imageSrc": "projects/facturador.webp",
+    "description": "Proyecto formativo. Aplicación que permite intreactuar con facturas (creación, edición, listados... etc). Contiene servicio de autentificación y uso de metadata. La intención fué mejorar el uso de Next. Se uso tipado con TypeScript, estilos con Tailwind y base de datos MySql. Despliegue en Vercel.   ",
+    "skills": ["react", "next", "tailwind", "mysql"],
+    "gitLinkFront": "https://github.com/jorgenovorodriguez/Nextjs-Dashboard"
+  }
+]

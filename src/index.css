@@ -1,3 +1,5 @@
+@import './vars.css';
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,4 +16,11 @@ body {
     padding: 0;
     width: 100%;
     overflow-x: hidden;
+}
+
+.text-gradient {
+    background: var(--gradient-title);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

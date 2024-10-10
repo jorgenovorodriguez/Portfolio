@@ -81,7 +81,9 @@ export const Contact: React.FC = () => {
     return (
         <section id='contact'>
             <div className={styles.container}>
-                <h2 className={styles.title}>{`Contacto`}</h2>
+                <h2
+                    className={`${styles.title} text-gradient`}
+                >{`Contacto`}</h2>
                 <form onSubmit={handleSubmit} className={styles.form}>
                     <div className={styles.formGroup}>
                         <label htmlFor='name'>{t(`Nombre`)}</label>

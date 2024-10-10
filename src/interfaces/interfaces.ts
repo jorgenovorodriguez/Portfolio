@@ -31,3 +31,17 @@ export interface MessageData {
   email: string;
   message: string;
 }
+
+export interface Project {
+  title: string;
+  category: string;
+  imageSrc: string;
+  description: string;
+  skills: string[];
+  gitLinkFront: string;
+  gitLinkBack: string;
+}
+
+export interface ProjectProps {
+  project: Project;
+}
