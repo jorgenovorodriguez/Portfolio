@@ -39,7 +39,7 @@ export interface Project {
   description: string;
   skills: string[];
   gitLinkFront: string;
-  gitLinkBack: string;
+  gitLinkBack?: string;
 }
 
 export interface ProjectProps {
