@@ -2,10 +2,12 @@ import React from 'react';
 import styles from './About.module.css';
 import { getImageUrl, redirectToWebsite } from '../../utils';
 import { t } from 'i18next';
-import { ABOUT_TEXT_1, ABOUT_TEXT_2, ABOUT_TEXT_3 } from '../../content/texts';
-
-const cvUrl =
-    'https://drive.google.com/file/d/18j1xN8gShz8PIoQRHEdU_0KQG5Ytx6Cr/view?usp=sharing';
+import {
+    ABOUT_CV_LINK,
+    ABOUT_TEXT_1,
+    ABOUT_TEXT_2,
+    ABOUT_TEXT_3,
+} from '../../content/texts';
 
 export const About: React.FC = () => {
     return (
@@ -24,7 +26,7 @@ export const About: React.FC = () => {
                     </div>
                     <div
                         className={styles.aboutItemButton}
-                        onClick={() => redirectToWebsite(cvUrl)}
+                        onClick={() => redirectToWebsite(ABOUT_CV_LINK)}
                     >
                         <img
                             src={getImageUrl('about/cursorIcon.png')}

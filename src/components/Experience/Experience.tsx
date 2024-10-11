@@ -10,13 +10,11 @@ import { t } from 'i18next';
 
 import { getExperienceData } from '../../services/apiServices';
 import { ExperienceData } from '../../interfaces/interfaces';
+import { EXPERIENCE_GRADHOC_REFERENCE } from '../../content/texts';
 
 export const Experience: React.FC = () => {
     const [data, setData] = useState<ExperienceData[]>();
     const [loading, setLoading] = useState<boolean>(true);
-
-    const gradhocReference =
-        'https://drive.google.com/file/d/1EzbGO6_NWo6_PD8Np_WjSxYSUf4RZUCp/view?usp=sharing';
 
     useEffect(() => {
         const fetchData = async () => {
@@ -26,7 +24,10 @@ export const Experience: React.FC = () => {
 
                 const updatedData = experienceData.map((item) => {
                     if (item.id === 1) {
-                        return { ...item, referenceLink: gradhocReference };
+                        return {
+                            ...item,
+                            referenceLink: EXPERIENCE_GRADHOC_REFERENCE,
+                        };
                     }
                     return item;
                 });
