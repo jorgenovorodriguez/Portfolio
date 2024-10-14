@@ -25,7 +25,7 @@ export const getProjectsData = async (): Promise<ProjectData[]> => {
     try {
         const language = navigator.language ;
         
-        const response = await axios.get<ProjectData[]>(`${BASE_LOCAL}/projects`, {
+        const response = await axios.get<ProjectData[]>(`${BASE_URL}/projects`, {
             headers: {
                 'Accept-Language': language, 
             },
