@@ -1,12 +1,14 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import styles from './Works.module.css';
-import projects from '../../data/projects.json';
-import { Project } from '../../interfaces/interfaces';
+import { ProjectData } from '../../interfaces/interfaces';
 import { t } from 'i18next';
 import { WorkCard } from './WorkCard';
+import { getProjectsData } from '../../services/apiServices';
 
 export const Works = () => {
+    const [data, setData] = useState<ProjectData[]>();
+    const [loading, setLoading] = useState<boolean>(true);
     const projectsRef = useRef<HTMLDivElement>(null);
     const scrollAmount = 300;
 
@@ -27,6 +29,22 @@ export const Works = () => {
             });
         }
     };
+
+    useEffect(() => {
+        const fetchData = async () => {
+            setLoading(true);
+            try {
+                const projectsData = await getProjectsData();
+                setData(projectsData);
+            } catch (err) {
+                console.error(err);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchData();
+    }, []);
+
     return (
         <div className={styles.preContainer}>
             <section className={styles.container} id='projects'>
@@ -34,7 +52,7 @@ export const Works = () => {
                     {t('Proyectos')}
                 </h2>
                 <div className={styles.projects} ref={projectsRef}>
-                    {projects.map((project: Project, id: number) => (
+                    {data?.map((project: ProjectData, id: number) => (
                         <div key={id} className={styles.card}>
                             <WorkCard project={project} />
                         </div>
