@@ -37,7 +37,7 @@ export const NavbarMobile: React.FC = () => {
                                             color={`#5F73B0`}
                                             width={`1.5rem`}
                                         />
-                                        <a href='/'>{`Home`}</a>
+                                        <a href='/'>{t(`Home`)}</a>
                                     </div>
                                 </li>
                                 <li>
@@ -46,7 +46,7 @@ export const NavbarMobile: React.FC = () => {
                                             color={`#5F73B0`}
                                             width={`1.5rem`}
                                         />
-                                        <a href='#about'>{`Sobre mí`}</a>
+                                        <a href='#about'>{t(`Sobre mí`)}</a>
                                     </div>
                                 </li>
                                 <li>
@@ -55,7 +55,9 @@ export const NavbarMobile: React.FC = () => {
                                             color={`#5F73B0`}
                                             width={`1.5rem`}
                                         />
-                                        <a href='#experience'>{`Experiencia`}</a>
+                                        <a href='#experience'>
+                                            {t(`Experiencia`)}
+                                        </a>
                                     </div>
                                 </li>
                                 <li>
@@ -64,7 +66,9 @@ export const NavbarMobile: React.FC = () => {
                                             color={`#5F73B0`}
                                             width={`2.7rem`}
                                         />
-                                        <a href='#technologies'>{`Tecnologías`}</a>
+                                        <a href='#technologies'>
+                                            {t(`Tecnologías`)}
+                                        </a>
                                     </div>
                                 </li>
                                 <li>
@@ -82,7 +86,7 @@ export const NavbarMobile: React.FC = () => {
                                             color={`#5F73B0`}
                                             width={`1.5rem`}
                                         />
-                                        <a href='#contact'>{`Contacto`}</a>
+                                        <a href='#contact'>{t(`Contacto`)}</a>
                                     </div>
                                 </li>
                             </ul>
