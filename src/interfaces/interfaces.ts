@@ -32,7 +32,7 @@ export interface MessageData {
   message: string;
 }
 
-export interface Project {
+export interface ProjectData {
   title: string;
   category: string;
   imageSrc: string;
@@ -43,5 +43,5 @@ export interface Project {
 }
 
 export interface ProjectProps {
-  project: Project;
+  project: ProjectData;
 }
