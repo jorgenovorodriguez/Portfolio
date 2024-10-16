@@ -45,3 +45,9 @@ export interface ProjectData {
 export interface ProjectProps {
   project: ProjectData;
 }
+
+export interface NavigationButtonProps {
+  direction: 'left' | 'right'; 
+  onClick: () => void;
+  hidden: boolean; 
+}
