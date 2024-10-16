@@ -5,7 +5,6 @@ import { getImageUrl, redirectToWebsite, copyText } from '../../utils';
 import { LInkedinIcon } from '../../../public/Icons/LInkedinIcon';
 import { t } from 'i18next';
 import { CopyIcon } from '../../../public/Icons/CopyIcon';
-import MouseFollower from '../MouseFollower/MouseFollower';
 
 export const Home: React.FC = () => {
     const homeImage: string = 'home/homeImage.png';

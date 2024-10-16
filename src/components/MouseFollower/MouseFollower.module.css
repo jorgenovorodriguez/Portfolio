@@ -27,7 +27,7 @@
     font-size: 20px;
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 1030px) {
     .follower {
         display: none;
     }

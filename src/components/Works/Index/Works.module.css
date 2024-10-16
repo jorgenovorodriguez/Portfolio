@@ -41,6 +41,13 @@
     padding: 10px;
 }
 
+@media screen and (max-width: 1030px) {
+    .projects {
+        margin-left: 0;
+        overflow-y: hidden;
+    }
+}
+
 @media screen and (max-width: 830px) {
     .projects {
         margin-left: 0;

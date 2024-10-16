@@ -33,7 +33,7 @@
     right: 20%;
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 1030px) {
     .navigationButton {
         display: none;
     }
