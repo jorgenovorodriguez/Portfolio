@@ -19,16 +19,6 @@
     letter-spacing: 1.75px;
 }
 
-.content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.aboutImage {
-    width: 35%;
-}
-
 .aboutItems {
     color: var(--color-text-secondary);
     display: flex;
@@ -38,8 +28,9 @@
 
 .aboutItem {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+    gap: 20px;
     border-radius: 20px;
     list-style: none;
     padding: 25px;

@@ -2,13 +2,13 @@ import styles from './App.module.css';
 import { About } from './components/About/About';
 import { Home } from './components/Home/Home';
 import { Navbar } from './components/Navbar/Navbar';
-import { Experience } from './components/Experience/Experience';
+import { Experience } from './components/Experience/Index/Experience';
 import { Contact } from './components/Contact/Contact';
-import { Technologies } from './components/Technologies/Technologies';
+import { Technologies } from './components/Technologies/Index/Technologies';
 import { Footer } from './components/Footer/Footer';
 import './i18n';
 import MouseFollower from './components/MouseFollower/MouseFollower';
-import { Works } from './components/Works/Works';
+import { Works } from './components/Works/Index/Works';
 
 const App = () => {
     return (

@@ -26,6 +26,12 @@ export interface ExperienceData {
   referenceLink?: string; 
 }
 
+export interface TechItemProps {
+  icon: React.ReactNode;
+  title: string;
+  text: string;
+}
+
 export interface MessageData {
   name: string;
   email: string;

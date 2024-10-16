@@ -7,10 +7,6 @@ export const ABOUT_TEXT_2 = `Comencé mi formación de manera autodidácta, pasa
 export const ABOUT_TEXT_3 = 
     `Si quieres saber más no dudes en descargar mi currículum.`
 
-export const ABOUT_CV_LINK = 'https://drive.google.com/file/d/1jmHIJLhQEXcKdvrFjPtMMRweBr_SgY83/view?usp=sharing'
-
-export const EXPERIENCE_GRADHOC_REFERENCE = 'https://drive.google.com/file/d/1lWY-JsU-TXocqjmqi4zmik3m83wp1XTr/view?usp=sharing';
-
 export const TECH_TEXT_1 = 'Creación de soluciones dinámicas y eficientes utilizando React y Vite. Gestión de estados globales con Redux Toolkit y tipado robusto a través de TypeScript.'
 
 export const TECH_TEXT_2 = 'Integración de WebSockets para la gestión y actualización de información en tiempo real.'
