@@ -11,6 +11,7 @@ import { t } from 'i18next';
 import { getExperienceData } from '../../services/apiServices';
 import { ExperienceData } from '../../interfaces/interfaces';
 import { EXPERIENCE_GRADHOC_REFERENCE } from '../../content/texts';
+import { ExperienceSkeleton } from './ExperienceSkeleton';
 
 export const Experience: React.FC = () => {
     const [data, setData] = useState<ExperienceData[]>();
@@ -49,51 +50,61 @@ export const Experience: React.FC = () => {
             </h2>
             <div className={styles.content}>
                 <ol className={styles.history}>
-                    {data?.map((historyItem, id) => {
-                        return (
-                            <li key={id} className={styles.historyItem}>
-                                <div className={styles.historyItemDot}></div>
+                    {loading ? (
+                        <ExperienceSkeleton />
+                    ) : (
+                        data?.map((historyItem, id) => {
+                            return (
+                                <li key={id} className={styles.historyItem}>
+                                    <div
+                                        className={styles.historyItemDot}
+                                    ></div>
 
-                                <div
-                                    className={styles.historyItemImgContainer}
-                                    onClick={() =>
-                                        redirectToWebsite(historyItem.link)
-                                    }
-                                >
-                                    <img
-                                        src={getImageUrl(historyItem.imageSrc)}
-                                        alt={`${historyItem.organisation} Logo`}
-                                    />
-                                </div>
+                                    <div
+                                        className={
+                                            styles.historyItemImgContainer
+                                        }
+                                        onClick={() =>
+                                            redirectToWebsite(historyItem.link)
+                                        }
+                                    >
+                                        <img
+                                            src={getImageUrl(
+                                                historyItem.imageSrc
+                                            )}
+                                            alt={`${historyItem.organisation} Logo`}
+                                        />
+                                    </div>
 
-                                <div className={styles.historyItemDetails}>
-                                    <h3>{` ${historyItem.organisation}`}</h3>
-                                    <h4>{`${historyItem.role}`},</h4>
-                                    <p>{`${formatDateToMonthYear(
-                                        historyItem.startDate
-                                    )} - ${formatDateToMonthYear(
-                                        historyItem.endDate
-                                    )}`}</p>
-                                    <ul>
-                                        <li key={id}>
-                                            {historyItem.experiences}
-                                        </li>
-                                        {historyItem?.referenceLink && (
-                                            <a
-                                                href={
-                                                    historyItem?.referenceLink
-                                                }
-                                                target='_blank'
-                                                rel='noopener noreferrer'
-                                            >
-                                                {t(`Referencias`)}
-                                            </a>
-                                        )}
-                                    </ul>
-                                </div>
-                            </li>
-                        );
-                    })}
+                                    <div className={styles.historyItemDetails}>
+                                        <h3>{` ${historyItem.organisation}`}</h3>
+                                        <h4>{`${historyItem.role}`},</h4>
+                                        <p>{`${formatDateToMonthYear(
+                                            historyItem.startDate
+                                        )} - ${formatDateToMonthYear(
+                                            historyItem.endDate
+                                        )}`}</p>
+                                        <ul>
+                                            <li key={id}>
+                                                {historyItem.experiences}
+                                            </li>
+                                            {historyItem?.referenceLink && (
+                                                <a
+                                                    href={
+                                                        historyItem?.referenceLink
+                                                    }
+                                                    target='_blank'
+                                                    rel='noopener noreferrer'
+                                                >
+                                                    {t(`Referencias`)}
+                                                </a>
+                                            )}
+                                        </ul>
+                                    </div>
+                                </li>
+                            );
+                        })
+                    )}
                 </ol>
             </div>
         </section>
