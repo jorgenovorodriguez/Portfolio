@@ -60,6 +60,38 @@
     gap: 10px;
 }
 
+@media screen and (max-width: 1300px) {
+    .container ul {
+        display: flex;
+        flex-direction: row;
+        gap: 23px;
+    }
+    .links {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .link a {
+        color: var(--color-text);
+        text-decoration: none;
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 1.5px;
+    }
+
+    .bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: -25px;
+
+        font-size: 10px;
+    }
+}
+
 @media screen and (max-width: 830px) {
     .container ul {
         display: flex;

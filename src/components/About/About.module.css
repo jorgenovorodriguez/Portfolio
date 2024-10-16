@@ -143,6 +143,14 @@
     color: #e5eaf7;
 }
 
+@media screen and (max-width: 1030px) {
+    .aboutItem p {
+        font-size: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
 @media screen and (max-width: 830px) {
     .container {
         background-color: transparent;

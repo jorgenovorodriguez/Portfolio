@@ -67,6 +67,30 @@
     }
 }
 
+@media screen and (max-width: 1030px) {
+    .techItems {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+    }
+
+    .techItemText h3 {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        gap: 5px;
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    .techItemText p {
+        font-size: 30px;
+        text-align: start;
+    }
+}
+
 @media screen and (max-width: 830px) {
     .container {
         width: 90%;

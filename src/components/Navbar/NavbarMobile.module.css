@@ -28,7 +28,7 @@
     margin-top: 150px;
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 1030px) {
     .buttonMobile {
         z-index: 999;
         top: 5px;

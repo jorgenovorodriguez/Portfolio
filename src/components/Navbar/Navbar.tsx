@@ -3,10 +3,10 @@ import { NavbarMobile } from './NavbarMobile';
 import { NavbarDesktop } from './NavbarDesktop';
 
 export const Navbar: React.FC = () => {
-    const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 830);
+    const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 1030);
 
     const handleResize = () => {
-        setIsMobile(window.innerWidth < 830);
+        setIsMobile(window.innerWidth < 1030);
     };
 
     useEffect(() => {
