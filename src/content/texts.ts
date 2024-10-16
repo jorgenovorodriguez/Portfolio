@@ -1,3 +1,10 @@
+export const HOME_HI = `Hola, soy Jorge.`
+
+export const HOME_MAIL = 'jorge.novo.rodriguez.93@gmail.com';
+
+export const HOME_DESCRIPTION = 'Desarrollador de FrontEnd'
+
+export const HOME_MAIL_TOOLTIP =  `Ese es mi email, puedes escribirme cuando quieras.`
 
 export const ABOUT_TEXT_1 = 
     `Mi área principal de especialización es el desarrollo Frontend pero mi formación es FullStack. Partiendo de la base de HTML, CSS y JavaScript me he especializado en la creación de aplicaciones con React.`
@@ -22,3 +29,12 @@ export const TECH_TEXT_6 = 'Utilización de herramientas como Jira para la docum
 export const POLICY_TEXT =
     `De conformidad con lo establecido en la Ley de Protección de Datos de Carácter Personal y Reglamento UE 2016/679, en caso de que nos envíe algún correo electrónico a la dirección indicada en la misma, o rellene algún formulario de recogida de datos, le informamos de que los datos de carácter personal que nos proporcione, serán registrados en el fichero del que es responsable jorgenovorodriguez.netlify.app, con la finalidad de gestionar su consulta.`
 
+export const FOOTER_C = '© 2024 Jorge Novo Rodríguez'
+
+export const FOOTER_POLICY_LABEL = 'Política de privacidad'
+
+export const CONTACT_ERROR_NAME = ' El nombre no puede estar vacío.'
+
+export const CONTACT_ERROR_MAIL = ' Asegúrese de que tiene formato de Email.'
+
+export const CONTACT_ERROR_MESSAGE = ' El mensaje no puede estar vacío.'
