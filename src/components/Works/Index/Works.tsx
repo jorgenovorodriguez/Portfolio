@@ -1,29 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 import styles from './Works.module.css';
-import {
-    NavigationButtonProps,
-    ProjectData,
-} from '../../interfaces/interfaces';
+import { ProjectData } from '../../../interfaces/interfaces';
 import { t } from 'i18next';
-import { WorkCard } from './WorkCard';
-import { getProjectsData } from '../../services/apiServices';
-import { WorkCardSkeleton } from './WorkCardSkeleton';
-
-const NavigationButton: React.FC<NavigationButtonProps> = ({
-    direction,
-    onClick,
-    hidden,
-}) => (
-    <div
-        className={`${styles.navigationButton} ${hidden ? styles.hidden : ''} ${
-            direction === 'left' ? styles.prevNavigation : styles.nextNavigation
-        }`}
-        onClick={onClick}
-    >
-        {direction === 'left' ? '<' : '>'}
-    </div>
-);
+import { WorkCard } from '../Item/WorkCard';
+import { getProjectsData } from '../../../services/apiServices';
+import { WorkCardSkeleton } from '../Skeleton/WorkCardSkeleton';
+import { NavigationButton } from '../utils/NavigationButton';
 
 export const Works: React.FC = () => {
     const [data, setData] = useState<ProjectData[]>([]);

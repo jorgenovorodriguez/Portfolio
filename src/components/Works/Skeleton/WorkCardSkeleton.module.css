@@ -1,4 +1,4 @@
-@import '../../vars.css';
+@import '../../../vars.css';
 
 .skeletonCard {
     background-color: var(--color-bg);

@@ -1,7 +1,8 @@
 import { t } from 'i18next';
-import { ProjectProps } from '../../interfaces/interfaces';
-import { capitalizeFirstLetter, getImageUrl } from '../../utils';
+import { ProjectProps } from '../../../interfaces/interfaces';
+import { capitalizeFirstLetter, getImageUrl } from '../../../utils';
 import styles from './WorkCard.module.css';
+import { SKILLS_ICONS_LINK } from '../../../content/links';
 
 export const WorkCard: React.FC<ProjectProps> = ({ project }) => {
     const { title, description, skills, imageSrc, gitLinkFront, gitLinkBack } =
@@ -50,7 +51,7 @@ export const WorkCard: React.FC<ProjectProps> = ({ project }) => {
             <ul className={styles.cardFooter}>
                 {skills?.map((skill, id) => (
                     <li key={id} className={styles.skills}>
-                        <img src={`https://skillicons.dev/icons?i=${skill}`} />
+                        <img src={`${SKILLS_ICONS_LINK}${skill}`} />
                         <p>{capitalizeFirstLetter(skill)}</p>
                     </li>
                 ))}
