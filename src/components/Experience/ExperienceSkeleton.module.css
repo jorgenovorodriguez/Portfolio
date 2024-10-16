@@ -40,36 +40,13 @@
     gap: 5px;
 }
 
-.historyItemTitle,
-.historyItemRole,
-.historyItemDate,
-.historyItemExperience,
-.historyItemLink {
+.historyItemExperience {
     background-color: var(--color-bg);
     border-radius: 4px;
     min-width: 850px;
+    width: 70%;
     height: 20px;
     animation: pulse 1.5s infinite ease-in-out;
-}
-
-.historyItemTitle {
-    width: 60%;
-}
-
-.historyItemRole {
-    width: 50%;
-}
-
-.historyItemDate {
-    width: 40%;
-}
-
-.historyItemExperience {
-    width: 70%;
-}
-
-.historyItemLink {
-    width: 30%;
 }
 
 @keyframes pulse {
@@ -99,12 +76,7 @@
     .historyItemImgContainer {
         display: none;
     }
-
-    .historyItemTitle,
-    .historyItemRole,
-    .historyItemDate,
-    .historyItemExperience,
-    .historyItemLink {
+    .historyItemExperience {
         min-width: 250px;
         height: 18px;
     }
