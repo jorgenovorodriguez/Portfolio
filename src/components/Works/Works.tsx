@@ -1,35 +1,36 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 import styles from './Works.module.css';
-import { ProjectData } from '../../interfaces/interfaces';
+import {
+    NavigationButtonProps,
+    ProjectData,
+} from '../../interfaces/interfaces';
 import { t } from 'i18next';
 import { WorkCard } from './WorkCard';
 import { getProjectsData } from '../../services/apiServices';
 import { WorkCardSkeleton } from './WorkCardSkeleton';
 
-export const Works = () => {
-    const [data, setData] = useState<ProjectData[]>();
+const NavigationButton: React.FC<NavigationButtonProps> = ({
+    direction,
+    onClick,
+    hidden,
+}) => (
+    <div
+        className={`${styles.navigationButton} ${hidden ? styles.hidden : ''} ${
+            direction === 'left' ? styles.prevNavigation : styles.nextNavigation
+        }`}
+        onClick={onClick}
+    >
+        {direction === 'left' ? '<' : '>'}
+    </div>
+);
+
+export const Works: React.FC = () => {
+    const [data, setData] = useState<ProjectData[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
+    const [currentIndex, setCurrentIndex] = useState<number>(0);
     const projectsRef = useRef<HTMLDivElement>(null);
     const scrollAmount = 300;
-
-    const scrollLeft = () => {
-        if (projectsRef.current) {
-            projectsRef.current.scrollBy({
-                left: -scrollAmount,
-                behavior: 'smooth',
-            });
-        }
-    };
-
-    const scrollRight = () => {
-        if (projectsRef.current) {
-            projectsRef.current.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth',
-            });
-        }
-    };
 
     useEffect(() => {
         const fetchData = async () => {
@@ -37,6 +38,7 @@ export const Works = () => {
             try {
                 const projectsData = await getProjectsData();
                 setData(projectsData);
+                setCurrentIndex(0);
             } catch (err) {
                 console.error(err);
             } finally {
@@ -45,6 +47,32 @@ export const Works = () => {
         };
         fetchData();
     }, []);
+
+    const scrollLeft = () => {
+        if (currentIndex > 0) {
+            if (projectsRef.current) {
+                projectsRef.current.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth',
+                });
+                setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 0));
+            }
+        }
+    };
+
+    const scrollRight = () => {
+        if (currentIndex < data.length - 1) {
+            if (projectsRef.current) {
+                projectsRef.current.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth',
+                });
+                setCurrentIndex((prevIndex) =>
+                    Math.min(prevIndex + 1, data.length - 1)
+                );
+            }
+        }
+    };
 
     return (
         <div className={styles.preContainer}>
@@ -66,18 +94,16 @@ export const Works = () => {
                     )}
                 </div>
             </section>
-            <div
-                className={`${styles.navigationButton} ${styles.prevNavigation}`}
+            <NavigationButton
+                direction='left'
                 onClick={scrollLeft}
-            >
-                &lt;
-            </div>
-            <div
-                className={`${styles.navigationButton} ${styles.nextNavigation}`}
+                hidden={currentIndex === 0}
+            />
+            <NavigationButton
+                direction='right'
                 onClick={scrollRight}
-            >
-                &gt;
-            </div>
+                hidden={currentIndex === data.length - 1}
+            />
         </div>
     );
 };
