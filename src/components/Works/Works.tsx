@@ -5,6 +5,7 @@ import { ProjectData } from '../../interfaces/interfaces';
 import { t } from 'i18next';
 import { WorkCard } from './WorkCard';
 import { getProjectsData } from '../../services/apiServices';
+import { WorkCardSkeleton } from './WorkCardSkeleton';
 
 export const Works = () => {
     const [data, setData] = useState<ProjectData[]>();
@@ -52,11 +53,17 @@ export const Works = () => {
                     {t('Proyectos')}
                 </h2>
                 <div className={styles.projects} ref={projectsRef}>
-                    {data?.map((project: ProjectData, id: number) => (
-                        <div key={id} className={styles.card}>
-                            <WorkCard project={project} />
+                    {loading ? (
+                        <div className={styles.card}>
+                            <WorkCardSkeleton />
                         </div>
-                    ))}
+                    ) : (
+                        data?.map((project: ProjectData, id: number) => (
+                            <div key={id} className={styles.card}>
+                                <WorkCard project={project} />
+                            </div>
+                        ))
+                    )}
                 </div>
             </section>
             <div
