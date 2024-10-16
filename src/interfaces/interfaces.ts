@@ -57,3 +57,17 @@ export interface NavigationButtonProps {
   onClick: () => void;
   hidden: boolean; 
 }
+
+export interface FooterLinkProps {
+  iconSrc: string;
+  altText: string;
+  text: string;
+  href?: string;
+}
+
+export interface NavItemProps {
+  Icon: React.FC<{ color: string; width: string }>;
+  label: string;
+  href: string;
+  width?: string;
+}

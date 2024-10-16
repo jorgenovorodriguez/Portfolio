@@ -1,14 +1,18 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import useField from '../../hooks/useField';
 import styles from './Contact.module.css';
 import { Modal } from '../Modal/Modal';
 import { t } from 'i18next';
 import { postMessageData } from '../../services/apiServices';
 import { Loading } from '../Loading/Loading';
+import {
+    CONTACT_ERROR_MAIL,
+    CONTACT_ERROR_MESSAGE,
+    CONTACT_ERROR_NAME,
+} from '../../content/texts';
 
 export const Contact: React.FC = () => {
     const [openModal, setOpenModal] = useState<boolean>(false);
-    const [buttonDisabled, setButtonDisabled] = useState<boolean>(true);
     const [loading, setLoading] = useState<boolean>(false);
 
     const resetFormFields = () => {
@@ -32,32 +36,24 @@ export const Contact: React.FC = () => {
         validate: (value) => value.trim() !== '',
     });
 
-    useEffect(() => {
-        if (
-            !nameField.error &&
-            !emailField.error &&
-            !messageField.error &&
-            nameField.value?.trim() !== '' &&
-            emailField.value?.trim() !== '' &&
-            messageField.value?.trim() !== ''
-        ) {
-            setButtonDisabled(false);
-        } else {
-            setButtonDisabled(true);
-        }
-    }, [
-        nameField.value,
-        emailField.value,
-        messageField.value,
-        nameField.error,
-        emailField.error,
-        messageField.error,
-    ]);
+    const buttonDisabled = useMemo(() => {
+        return (
+            nameField.error ||
+            emailField.error ||
+            messageField.error ||
+            nameField.value.trim() === '' ||
+            emailField.value.trim() === '' ||
+            messageField.value.trim() === ''
+        );
+    }, [nameField, emailField, messageField]);
+
+    console.log(buttonDisabled);
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         setLoading(true);
         event.preventDefault();
         if (nameField.error || emailField.error || messageField.error) {
+            setLoading(false);
             return;
         }
 
@@ -93,21 +89,14 @@ export const Contact: React.FC = () => {
                             name='first_name'
                         />
                         {nameField.error && (
-                            <span>
-                                {`${
-                                    nameField.error +
-                                    t(` El nombre no puede estar vacío.`)
-                                } `}
-                            </span>
+                            <span>{`${t(CONTACT_ERROR_NAME)} `}</span>
                         )}
                     </div>
                     <div className={styles.formGroup}>
                         <label htmlFor='email'>{t(`Email`)}</label>
                         <input {...emailField} placeholder={t(`Email`)} />
                         {emailField.error && (
-                            <span>{`${t(
-                                ` Asegúrese de que tiene formato de Email.`
-                            )} `}</span>
+                            <span>{`${t(CONTACT_ERROR_MAIL)}`}</span>
                         )}
                     </div>
                     <div className={styles.formGroupMessage}>
@@ -117,10 +106,7 @@ export const Contact: React.FC = () => {
                             placeholder={t(`Mensaje`)}
                         />
                         {messageField.error && (
-                            <span>{`${
-                                nameField.error +
-                                t(` El mensaje no puede estar vacío.`)
-                            } `}</span>
+                            <span>{`${t(CONTACT_ERROR_MESSAGE)}`}</span>
                         )}
                     </div>
                     <button type='submit' disabled={buttonDisabled}>

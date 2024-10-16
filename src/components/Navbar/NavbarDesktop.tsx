@@ -6,6 +6,7 @@ import { TechnologiesIcon } from '../../../public/Icons/TechnologiesIcon';
 import { ContactIcon } from '../../../public/Icons/ContactIcon';
 import { ProjectsIcon } from '../../../public/Icons/ProjectsIcon';
 import { t } from 'i18next';
+import { NavItem } from './NavItem';
 
 export const NavbarDesktop: React.FC = () => {
     return (
@@ -13,46 +14,43 @@ export const NavbarDesktop: React.FC = () => {
             <div className={styles.menu}>
                 <ul className={styles.menuItems}>
                     <li>
-                        <div>
-                            <HomeIcon color={`#5F73B0`} width={`1.2rem`} />
-                            <a href='/'>{t(`Home`)}</a>
-                        </div>
+                        <NavItem Icon={HomeIcon} label={t('Home')} href='/' />
                     </li>
                     <li>
-                        <div>
-                            <AboutIcon color={`#5F73B0`} width={`1.2rem`} />
-                            <a href='#about'>{t(`Sobre mí`)}</a>
-                        </div>
+                        <NavItem
+                            Icon={AboutIcon}
+                            label={t('Sobre mí')}
+                            href='#about'
+                        />
                     </li>
                     <li>
-                        <div>
-                            <ExperienceIcon
-                                color={`#5F73B0`}
-                                width={`1.2rem`}
-                            />
-                            <a href='#experience'>{t(`Experiencia`)}</a>
-                        </div>
+                        <NavItem
+                            Icon={ExperienceIcon}
+                            label={t('Experiencia')}
+                            href='#experience'
+                        />
                     </li>
                     <li>
-                        <div>
-                            <TechnologiesIcon
-                                color={`#5F73B0`}
-                                width={`1.2rem`}
-                            />
-                            <a href='#technologies'>{t(`Tecnologías`)}</a>
-                        </div>
+                        <NavItem
+                            Icon={TechnologiesIcon}
+                            label={t('Tecnologías')}
+                            href='#technologies'
+                        />
                     </li>
                     <li>
-                        <div>
-                            <ProjectsIcon color={`#5F73B0`} width={`1.1rem`} />
-                            <a href='#projects'>{t(`Proyectos`)}</a>
-                        </div>
+                        <NavItem
+                            Icon={ProjectsIcon}
+                            label={t('Proyectos')}
+                            href='#projects'
+                            width='1.1rem'
+                        />
                     </li>
                     <li>
-                        <div>
-                            <ContactIcon color={`#5F73B0`} width={`1.2rem`} />
-                            <a href='#contact'>{t(`Contacto`)}</a>
-                        </div>
+                        <NavItem
+                            Icon={ContactIcon}
+                            label={t('Contacto')}
+                            href='#contact'
+                        />
                     </li>
                 </ul>
             </div>
