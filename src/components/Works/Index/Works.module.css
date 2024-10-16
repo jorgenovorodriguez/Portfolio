@@ -20,10 +20,9 @@
     width: 100%;
     position: relative;
     display: flex;
-    overflow: scroll;
+    overflow-x: auto;
     margin-left: 25%;
     scroll-snap-type: x mandatory;
-    overflow-x: hidden;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
 }
@@ -45,6 +44,17 @@
     .projects {
         margin-left: 0;
         overflow-y: hidden;
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-text-secondary) transparent;
+    }
+
+    .projects::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .projects::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 4px;
     }
 }
 
