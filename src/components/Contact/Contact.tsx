@@ -1,7 +1,6 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import useField from '../../hooks/useField';
 import styles from './Contact.module.css';
-import { Modal } from '../Modal/Modal';
 import { t } from 'i18next';
 import { postMessageData } from '../../services/apiServices';
 import { Loading } from '../Loading/Loading';
@@ -10,10 +9,12 @@ import {
     CONTACT_ERROR_MESSAGE,
     CONTACT_ERROR_NAME,
 } from '../../content/texts';
+import { useError } from '../../contexts/ErrorContext';
+import { toast } from 'react-toastify';
 
 export const Contact: React.FC = () => {
-    const [openModal, setOpenModal] = useState<boolean>(false);
     const [loading, setLoading] = useState<boolean>(false);
+    const { setError } = useError();
 
     const resetFormFields = () => {
         nameField.reset();
@@ -47,8 +48,6 @@ export const Contact: React.FC = () => {
         );
     }, [nameField, emailField, messageField]);
 
-    console.log(buttonDisabled);
-
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         setLoading(true);
         event.preventDefault();
@@ -62,13 +61,12 @@ export const Contact: React.FC = () => {
             email: emailField.value,
             message: messageField.value,
         };
-
         try {
             await postMessageData(data);
-            setOpenModal(true);
+            toast.success(t('Mensaje enviado con éxito'));
             resetFormFields();
         } catch (err) {
-            console.error(err);
+            setError(t('Error al enviar el mensaje'));
         } finally {
             setLoading(false);
         }
@@ -115,12 +113,6 @@ export const Contact: React.FC = () => {
                 </form>
             </div>
             {loading && <Loading />}
-            {openModal && (
-                <Modal
-                    text={t(`Mensaje enviado con éxito`)}
-                    onClose={() => setOpenModal(false)}
-                />
-            )}
         </section>
     );
 };

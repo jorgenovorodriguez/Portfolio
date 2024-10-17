@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 
 export interface SvgIconProps {
     color: string;
@@ -70,4 +71,12 @@ export interface NavItemProps {
   label: string;
   href: string;
   width?: string;
+}
+
+export interface ErrorContextType {
+  setError: (message: string) => void;
+}
+
+export interface ErrorProviderProps {
+  children: ReactNode;
 }

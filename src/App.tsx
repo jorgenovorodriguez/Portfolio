@@ -9,13 +9,15 @@ import { Footer } from './components/Footer/Footer';
 import './i18n';
 import MouseFollower from './components/MouseFollower/MouseFollower';
 import { Works } from './components/Works/Index/Works';
+import Toast from './components/Toast/Toast';
 
 const App = () => {
     return (
         <>
             <div className={styles.App}>
-                <MouseFollower />
+                <Toast />
                 <Navbar />
+                <MouseFollower />
                 <Home />
                 <About />
                 <Experience />

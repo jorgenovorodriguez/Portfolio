@@ -7,10 +7,12 @@ import { WorkCard } from '../Item/WorkCard';
 import { getProjectsData } from '../../../services/apiServices';
 import { WorkCardSkeleton } from '../Skeleton/WorkCardSkeleton';
 import { NavigationButton } from '../utils/NavigationButton';
+import { useError } from '../../../contexts/ErrorContext';
 
 export const Works: React.FC = () => {
     const [data, setData] = useState<ProjectData[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
+    const { setError } = useError();
     const [currentIndex, setCurrentIndex] = useState<number>(0);
     const projectsRef = useRef<HTMLDivElement>(null);
     const scrollAmount = 300;
@@ -23,7 +25,7 @@ export const Works: React.FC = () => {
                 setData(projectsData);
                 setCurrentIndex(0);
             } catch (err) {
-                console.error(err);
+                setError(t('Error al obtener los proyectos'));
             } finally {
                 setLoading(false);
             }
