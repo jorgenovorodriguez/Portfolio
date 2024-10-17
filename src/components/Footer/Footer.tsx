@@ -35,7 +35,7 @@ const FooterLink: React.FC<FooterLinkProps> = ({
     </li>
 );
 
-export const Footer: React.FC = () => {
+const Footer: React.FC = () => {
     const [openPolicy, setOpenPolicy] = useState(false);
 
     const handleOpenPolicy = () => setOpenPolicy(true);
@@ -83,3 +83,5 @@ export const Footer: React.FC = () => {
         </footer>
     );
 };
+
+export default Footer;

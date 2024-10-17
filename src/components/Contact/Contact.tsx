@@ -12,7 +12,7 @@ import {
 import { useError } from '../../contexts/ErrorContext';
 import { toast } from 'react-toastify';
 
-export const Contact: React.FC = () => {
+const Contact: React.FC = () => {
     const [loading, setLoading] = useState<boolean>(false);
     const { setError } = useError();
 
@@ -116,3 +116,5 @@ export const Contact: React.FC = () => {
         </section>
     );
 };
+
+export default Contact;

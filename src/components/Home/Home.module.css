@@ -22,11 +22,6 @@
 .linkedinIcon {
     position: relative;
     cursor: pointer;
-    transition: transform 0.8s ease;
-}
-
-.linkedinIcon:hover {
-    transform: scale(1.2);
 }
 
 .title {

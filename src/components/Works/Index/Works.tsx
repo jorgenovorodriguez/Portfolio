@@ -9,7 +9,7 @@ import { WorkCardSkeleton } from '../Skeleton/WorkCardSkeleton';
 import { NavigationButton } from '../utils/NavigationButton';
 import { useError } from '../../../contexts/ErrorContext';
 
-export const Works: React.FC = () => {
+const Works: React.FC = () => {
     const [data, setData] = useState<ProjectData[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const { setError } = useError();
@@ -92,3 +92,5 @@ export const Works: React.FC = () => {
         </div>
     );
 };
+
+export default Works;

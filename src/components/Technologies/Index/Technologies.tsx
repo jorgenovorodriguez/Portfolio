@@ -52,7 +52,7 @@ const techItems = [
     },
 ];
 
-export const Technologies: React.FC = () => {
+const Technologies: React.FC = () => {
     const SkillsCarousel = () => {
         return skills.map((skill, index) => (
             <div key={skill.title} className={styles.carouselItem}>
@@ -86,3 +86,5 @@ export const Technologies: React.FC = () => {
         </section>
     );
 };
+
+export default Technologies;

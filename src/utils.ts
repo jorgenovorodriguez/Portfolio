@@ -6,15 +6,19 @@ export const getImageUrl = (path: string): string | undefined  => {
     }
 };
 
-export const redirectToWebsite = (url: string): void => {
+export const redirectToWebsite = (url: string): boolean => {
     try {
         const newWindow = window.open(url, '_blank');
-        
+
         if (newWindow) {
             newWindow.opener = null; 
+            return true; 
+        } else {
+            return false; 
         }
     } catch (error) {
         console.error(error);
+        return false; 
     }
 };
 
@@ -33,11 +37,13 @@ export const formatDateToMonthYear = (dateString: string): string => {
     }
 };
 
-export const copyText = async (texto: string) => {
+export const copyText = async (texto: string): Promise<boolean> => {
     try {
         await navigator.clipboard.writeText(texto);
+        return true; 
     } catch (err) {
         console.error(err);
+        return false;
     }
 };
 

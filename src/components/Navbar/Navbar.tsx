@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { NavbarMobile } from './NavbarMobile';
 import { NavbarDesktop } from './NavbarDesktop';
 
-export const Navbar: React.FC = () => {
+const Navbar: React.FC = () => {
     const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 1030);
 
     const handleResize = () => {
@@ -18,3 +18,5 @@ export const Navbar: React.FC = () => {
 
     return <>{isMobile ? <NavbarMobile /> : <NavbarDesktop />}</>;
 };
+
+export default Navbar;

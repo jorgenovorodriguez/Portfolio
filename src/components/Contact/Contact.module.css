@@ -34,13 +34,13 @@
 
 .formGroup span {
     padding-top: 3px;
-    color: red;
+    color: rgb(194, 5, 5);
     font-family: var(--font-roboto);
 }
 
 .formGroupMessage span {
     padding-top: 3px;
-    color: red;
+    color: rgb(194, 5, 5);
     font-family: var(--font-roboto);
 }
 

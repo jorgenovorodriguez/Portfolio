@@ -55,5 +55,7 @@
     "useError debe ser usado dentro de un ErrorProvider" : "useError debe ser usado dentro de un ErrorProvider",
     "Error al obtener los datos de experiencia" : "Error al obtener los datos de experiencia",
     "Error al obtener los proyectos" : "Error al obtener los proyectos",
-    "Error al enviar el mensaje" : "Error al enviar el mensaje"
+    "Error al enviar el mensaje" : "Error al enviar el mensaje",
+    "Email guardado en el portapapeles" : "Email guardado en el portapapeles",
+    "Error al abrir el enlace" : "Error al abrir el enlace"
 }

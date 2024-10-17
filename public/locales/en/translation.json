@@ -55,5 +55,7 @@
     "useError debe ser usado dentro de un ErrorProvider" : "useError must be used within an ErrorProvider",
     "Error al obtener los datos de experiencia" : "Error fetching experience data",
     "Error al obtener los proyectos" : "Error fetching projects",
-    "Error al enviar el mensaje" : "Error sending the message"
+    "Error al enviar el mensaje" : "Error sending the message",
+    "Email guardado en el portapapeles" : "Email saved to clipboard.",
+    "Error al abrir el enlace" : "Error opening the link."
 }

@@ -5,7 +5,7 @@ import { ExperienceSkeleton } from '../Skeleton/ExperienceSkeleton';
 import ExperienceItem from '../Item/ExperienceItem';
 import useExperiences from '../../../hooks/useExperiences';
 
-export const Experience: React.FC = () => {
+const Experience: React.FC = () => {
     const { experiences, loading } = useExperiences();
 
     return (
@@ -30,3 +30,5 @@ export const Experience: React.FC = () => {
         </section>
     );
 };
+
+export default Experience;

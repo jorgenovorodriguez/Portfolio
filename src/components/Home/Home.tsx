@@ -12,26 +12,48 @@ import {
     HOME_MAIL_TOOLTIP,
 } from '../../content/texts';
 import { LINKEDIN_LINK } from '../../content/links';
+import { toast } from 'react-toastify';
+import { useError } from '../../contexts/ErrorContext';
 
-const EmailCopy: React.FC = () => (
-    <div className={styles.copyMail}>
-        <p data-tooltip={`${t(HOME_MAIL_TOOLTIP)} 😉`}>{HOME_MAIL}</p>
-        <div onClick={() => copyText(HOME_MAIL)}>
-            <CopyIcon color='white' width='1.2rem' />
+const EmailCopy: React.FC = () => {
+    const { setError } = useError();
+
+    const handleCopy = async () => {
+        const success = await copyText(HOME_MAIL);
+        if (!success) {
+            setError(t('Error al copiar el texto'));
+        } else {
+            toast.info(t('Email guardado en el portapapeles'));
+        }
+    };
+
+    return (
+        <div className={styles.copyMail}>
+            <p data-tooltip={`${t(HOME_MAIL_TOOLTIP)} 😉`}>{HOME_MAIL}</p>
+            <div onClick={handleCopy}>
+                <CopyIcon color='white' width='1.2rem' />
+            </div>
         </div>
-    </div>
-);
+    );
+};
 
-const LinkedInButton: React.FC = () => (
-    <div
-        className={styles.linkedinIcon}
-        onClick={() => redirectToWebsite(LINKEDIN_LINK)}
-    >
-        <LInkedinIcon color='white' width='4rem' />
-    </div>
-);
+const LinkedInButton: React.FC = () => {
+    const { setError } = useError();
 
-export const Home: React.FC = () => {
+    const handleRedirect = () => {
+        const success = redirectToWebsite(LINKEDIN_LINK);
+        if (!success) {
+            setError(t('Error al abrir el enlace'));
+        }
+    };
+    return (
+        <div className={styles.linkedinIcon} onClick={handleRedirect}>
+            <LInkedinIcon color='white' width='4rem' />
+        </div>
+    );
+};
+
+const Home: React.FC = () => {
     return (
         <section className={styles.container}>
             <div className={styles.content}>
@@ -50,3 +72,5 @@ export const Home: React.FC = () => {
         </section>
     );
 };
+
+export default Home;
