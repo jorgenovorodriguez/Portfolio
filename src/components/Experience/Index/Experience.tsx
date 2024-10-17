@@ -6,7 +6,7 @@ import ExperienceItem from '../Item/ExperienceItem';
 import useExperiences from '../../../hooks/useExperiences';
 
 export const Experience: React.FC = () => {
-    const { experiences, loading, error } = useExperiences();
+    const { experiences, loading } = useExperiences();
 
     return (
         <section className={styles.container} id='experience'>

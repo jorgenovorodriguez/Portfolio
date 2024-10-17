@@ -1,0 +1,8 @@
+@import '../../vars.css';
+
+.customToast {
+    width: '300px';
+    font-family: var(--font-roboto);
+    font-size: 20px;
+    color: var(--color-text-secondary);
+}
