@@ -57,5 +57,7 @@
     "Error al obtener los proyectos" : "Error fetching projects",
     "Error al enviar el mensaje" : "Error sending the message",
     "Email guardado en el portapapeles" : "Email saved to clipboard.",
-    "Error al abrir el enlace" : "Error opening the link."
+    "Error al abrir el enlace" : "Error opening the link.",
+    "Error al descargar el documento" : "Error downloading the document",
+    "Documento descargado" : "Document downloaded"
 }

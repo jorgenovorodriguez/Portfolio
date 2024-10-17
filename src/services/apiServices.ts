@@ -46,3 +46,27 @@ export const postMessageData = async (data: MessageData): Promise<any> => {
         throw error;
     }
 };
+
+export const getPdf = async (): Promise<void> => {
+    try {
+        const response = await axios.get(`${BASE_URL}/download`, {
+            responseType: 'blob',
+        });
+
+        const url = window.URL.createObjectURL(new Blob([response.data]));
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', 'JorgeNovoRodriguezCvDev.pdf'); 
+        document.body.appendChild(link);
+        link.click();
+
+        if (link.parentNode) {
+            link.parentNode.removeChild(link);
+        }
+        
+        window.URL.revokeObjectURL(url);
+    } catch (error) {
+        console.error('Error al descargar el documento:', error);
+        throw error;
+    }
+}; 

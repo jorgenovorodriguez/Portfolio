@@ -3,8 +3,9 @@ import styles from './About.module.css';
 import { getImageUrl, redirectToWebsite } from '../../utils';
 import { t } from 'i18next';
 import { ABOUT_TEXT_1, ABOUT_TEXT_2, ABOUT_TEXT_3 } from '../../content/texts';
-import { ABOUT_CV_LINK } from '../../content/links';
 import { useError } from '../../contexts/ErrorContext';
+import { getPdf } from '../../services/apiServices';
+import { toast } from 'react-toastify';
 
 const AboutParagraphs: React.FC<{ texts: string[] }> = ({ texts }) => (
     <>
@@ -26,10 +27,12 @@ const About: React.FC = () => {
 
     const { setError } = useError();
 
-    const handleRedirect = () => {
-        const success = redirectToWebsite(ABOUT_CV_LINK);
-        if (!success) {
-            setError(t('Error al abrir el enlace'));
+    const handleDownload = async () => {
+        try {
+            await getPdf();
+            toast.success(t('Documento descargado'));
+        } catch (error) {
+            setError(t('Error al descargar el documento'));
         }
     };
 
@@ -40,7 +43,7 @@ const About: React.FC = () => {
                 <div className={styles.aboutItem}>
                     <AboutParagraphs texts={aboutTexts} />
                 </div>
-                <DownloadButton onClick={handleRedirect} />
+                <DownloadButton onClick={handleDownload} />
             </div>
         </section>
     );
