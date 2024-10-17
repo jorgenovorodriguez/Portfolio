@@ -16,8 +16,8 @@ const App = () => {
         <>
             <div className={styles.App}>
                 <Toast />
-                <Navbar />
                 <MouseFollower />
+                <Navbar />
                 <Home />
                 <About />
                 <Experience />

@@ -54,5 +54,6 @@
     "Error desconocido" : "Unknown error",
     "useError debe ser usado dentro de un ErrorProvider" : "useError must be used within an ErrorProvider",
     "Error al obtener los datos de experiencia" : "Error fetching experience data",
-    "Error al obtener los proyectos" : "Error fetching projects"
+    "Error al obtener los proyectos" : "Error fetching projects",
+    "Error al enviar el mensaje" : "Error sending the message"
 }
