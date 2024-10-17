@@ -11,10 +11,16 @@ import {
 } from '../../content/texts';
 import { useError } from '../../contexts/ErrorContext';
 import { toast } from 'react-toastify';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const Contact: React.FC = () => {
     const [loading, setLoading] = useState<boolean>(false);
     const { setError } = useError();
+    const [captchaValue, setCaptchaValue] = useState(null);
+
+    const handleCaptchaChange = (value: any) => {
+        setCaptchaValue(value);
+    };
 
     const resetFormFields = () => {
         nameField.reset();
@@ -44,14 +50,21 @@ const Contact: React.FC = () => {
             messageField.error ||
             nameField.value.trim() === '' ||
             emailField.value.trim() === '' ||
-            messageField.value.trim() === ''
+            messageField.value.trim() === '' ||
+            !captchaValue
         );
-    }, [nameField, emailField, messageField]);
+    }, [nameField, emailField, messageField, captchaValue]);
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         setLoading(true);
         event.preventDefault();
-        if (nameField.error || emailField.error || messageField.error) {
+
+        if (
+            nameField.error ||
+            emailField.error ||
+            messageField.error ||
+            !captchaValue
+        ) {
             setLoading(false);
             return;
         }
@@ -60,6 +73,7 @@ const Contact: React.FC = () => {
             name: nameField.value,
             email: emailField.value,
             message: messageField.value,
+            captchaToken: captchaValue,
         };
         try {
             await postMessageData(data);
@@ -107,6 +121,10 @@ const Contact: React.FC = () => {
                             <span>{`${t(CONTACT_ERROR_MESSAGE)}`}</span>
                         )}
                     </div>
+                    <ReCAPTCHA
+                        sitekey='6Ld3i1UqAAAAABPb1rtVvoxSTqjpTP7wJSGNmTpQ'
+                        onChange={handleCaptchaChange}
+                    />
                     <button type='submit' disabled={buttonDisabled}>
                         {t(`Enviar`)}
                     </button>

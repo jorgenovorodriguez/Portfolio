@@ -39,7 +39,7 @@ export const getProjectsData = async (): Promise<ProjectData[]> => {
 
 export const postMessageData = async (data: MessageData): Promise<any> => {
     try {
-        const response = await axios.post(`${BASE_URL}/message`, data);
+        const response = await axios.post(`${BASE_LOCAL}/message`, data);
         return response.data;
     } catch (error) {
         console.error('Error al enviar el mensaje:', error);
