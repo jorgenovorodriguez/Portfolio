@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import useField from '../../hooks/useField';
 import styles from './Contact.module.css';
-import { t } from 'i18next';
+import i18next, { t } from 'i18next';
 import { postMessageData } from '../../services/apiServices';
 import { Loading } from '../Loading/Loading';
 import {
@@ -17,6 +17,7 @@ const Contact: React.FC = () => {
     const [loading, setLoading] = useState<boolean>(false);
     const { setError } = useError();
     const [captchaValue, setCaptchaValue] = useState(null);
+    const userLanguage = i18next.language;
 
     const handleCaptchaChange = (value: any) => {
         setCaptchaValue(value);
@@ -124,6 +125,8 @@ const Contact: React.FC = () => {
                     <ReCAPTCHA
                         sitekey='6Ld3i1UqAAAAABPb1rtVvoxSTqjpTP7wJSGNmTpQ'
                         onChange={handleCaptchaChange}
+                        hl={userLanguage}
+                        theme='dark'
                     />
                     <button type='submit' disabled={buttonDisabled}>
                         {t(`Enviar`)}
